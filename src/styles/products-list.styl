@@ -1,0 +1,114 @@
+.products-list-wrap
+	.tab-group
+		text-align center
+	.products
+		position relative
+	.main-btn
+		padding 7px 15px
+		&:not(last-of-type)
+			margin-right 10px
+	.slides
+		position relative
+		margin-top 25px
+		z-index 10
+		ul
+			display flex
+			justify-content space-between
+		article
+			display flex
+			flex-direction column
+			justify-content space-between
+			height 100%
+			text-align center
+		.image
+			position relative
+			height 175px
+			img
+				position absolute
+				top 50%
+				left 50%
+				transform translate3d(-50%,-50%,0)
+				width 100%
+				height auto
+				max-width 135px
+				max-height 175px
+		.title
+			margin 22px 0 12px
+			color COLOR_BRAND_DARK_BLACK
+			font 600 15px / 1.2 'Catamaran'
+		.price
+			color COLOR_BRAND_DARK_GREY
+			font 400 17px / 1.2 'Catamaran'
+			p
+				display inline-block
+			.old
+				text-decoration line-through
+			.new
+				color COLOR_BRAND_RED
+				font-weight 600
+		.add-to-cart
+			margin 32px 0 12px
+			cursor pointer
+			.icon
+				position relative
+				top 3px
+			p
+				display inline-block
+				margin-left 5px
+				color COLOR_BRAND_DARK_BLACK
+				font 500 15px / 1.2 'Catamaran'
+				text-decoration underline
+		.orange-arrow
+			color COLOR_BRAND_DARK_GREY
+			font 400 14px / 1.2 'Catamaran'
+	.item-li
+		position relative
+		padding 25px 32px
+		width 19%
+		background COLOR_BRAND_WHITE
+	.ribbon
+		position absolute
+		max-width 80%
+		top 30px
+		left -5px
+		padding 5px 20px 5px 20px
+		z-index 1
+		&.ribbon-new
+			background COLOR_BRAND_DARK_BLACK
+			&:before, &:after
+				background COLOR_BRAND_DARK_BLACK
+			.ribbon-content:before
+				border 3px solid transparent
+				border-right 3px solid COLOR_BRAND_DARK_BLACK
+				border-bottom 3px solid COLOR_BRAND_DARK_BLACK
+		&.ribbon-discount
+			background COLOR_BRAND_RED
+			&:before, &:after
+				background COLOR_BRAND_RED
+			.ribbon-content:before
+				border 3px solid transparent
+				border-right 3px solid COLOR_BRAND_RED
+				border-bottom 3px solid COLOR_BRAND_RED
+		&:before, &:after
+			content ''
+			display block
+			position absolute
+			right -10px
+			width 22%
+			height 50%
+		&:before
+			top 0
+			transform skew(-35deg)
+		&:after
+			bottom 0
+			transform skew(35deg)
+		.ribbon-content
+			text-transform uppercase
+			color COLOR_BRAND_WHITE
+			font 400 13px / 1.2 'Catamaran'
+			&:before
+				content ''
+				position absolute
+				left 0
+				bottom 100%
+
