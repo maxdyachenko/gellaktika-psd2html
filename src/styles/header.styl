@@ -1,154 +1,98 @@
 .main-header
-	.top-content
-		padding 20px 0 25px
-		background-color COLOR_BRAND_DARK_BLACK
-		.container
+	.top-actions
+		display flex
+		justify-content space-between
+		flex-wrap wrap
+		ul
 			display flex
-			justify-content space-between
-			align-items center
-			> div
-				flex-basis 33%
-	.logo img
-		margin auto
-	.right-align
-		text-align right
-	.country-dropdown, .nav-links
-		margin-bottom 8px
-	.phone
-		display inline-block
-		font 600 14px / 1.2 'Catamaran'
-		color COLOR_BRAND_WHITE
-	.schedule
-		position relative
-		display inline-block
-		padding-right 12px
-		margin-right 6px
-	.online-indicator
-		position absolute
-		right 0
-		top 50%
-		transform translateY(-50%)
-		display inline-block
-		width 5px
-		height @width
-		border-radius 50%
-		background-color COLOR_BRAND_GREEN2
-	.bottom-content
-		border-bottom 1px solid COLOR_BRAND_GREY
-	.auth-dropdown, .nav-links li, .schedule
-		color COLOR_BRAND_LIGHT_GREY2
-		letter-spacing .2px
-		font 400 14px / 1.4 'Catamaran'
-	.auth-dropdown
-		position relative
-		display inline-block
-		padding-right 18px
-		margin-right 20px
-		cursor pointer
-		toggle-dropdown()
-		&:after
-			top auto
-			bottom 50%
-			transform rotate(135deg)
-	.cart-info, .sum-dropdown, .cart-icon
-		display inline-block
-	.sum-dropdown
-		position relative
-		padding-right 15px
-		color COLOR_BRAND_GREEN
-		font 400 14px / 1.2 'Catamaran'
-		cursor pointer
-		toggle-dropdown()
-		&:after
-			top auto
-			bottom 50%
-			transform rotate(135deg)
-	.cart-icon
-		position relative
-		margin-right 13px
-		top 5px
-		> div
-			display inline-block
-		.counts
-			position absolute
-			top -6px
-			right -8px
-			display inline-block
-			font 500 13px / 1.2 'Catamaran'
-			color COLOR_BRAND_DARK_BLACK
-			border-radius 50%
-			overflow hidden
-			background COLOR_BRAND_WHITE
-
-			&:before,&:after
-				content '\200B'
-				display inline-block
-				line-height 0
-				background COLOR_BRAND_WHITE
-				padding-top 50%
-				padding-bottom 50%
-			&:before
-				padding-left 4px
-			&:after
-				padding-right 4px
-	.country-dropdown
-		color COLOR_BRAND_LIGHT_GREY2
-		font 400 14px / 1.2 'Catamaran'
-		.flag-icon
-			display inline-block
-			margin-right 6px
-		p
-			position relative
-			display inline-block
-			padding-right 10px
-			cursor pointer
-			toggle-dropdown()
-			&:after
-				top auto
-				bottom 50%
-				transform rotate(135deg)
-	.nav-links
-		text-align right
-		li
-			display inline-block
-			&:not(:last-of-type)
-				margin-right 20px
-
-	.bottom-content
-		padding 23px 0
-		.container
-			display flex
-			justify-content flex-end
-			align-items center
-		nav
-			display flex
-			justify-content space-around
 			flex-wrap wrap
-			width 100%
 		li
-			display inline-block
-			position relative
-			margin-right 30px
-			color COLOR_BRAND_DARK_GREY
-			text-transform uppercase
-			font 500 16px / 1.5 'Catamaran'
-			&.dropdown
-				padding-right 12px
-				toggle-dropdown()
-				&:after
-					top auto
-					bottom 50%
-					transform rotate(135deg)
-					border-color COLOR_BRAND_LIGHT_GREY
-		.search-field
-			form
+			flex-shrink 0
+			a
+				margin-right 30px
+				color COLOR_BRAND_DARK_BLACK
+				font 300 14px / 1.4 'Roboto'
+		.nav, .consult, .personal-area
+			padding 10px 0
+		.consult
+			color COLOR_BRAND_BLUE
+			font 400 14px / 1.4 Roboto
+			span
+				padding-left 5px
+				color COLOR_BRAND_BLACK
+		.personal-area
+			margin-left auto
+			font 300 14px / 1.4 'Roboto'
+			color COLOR_BRAND_DARK_BLACK
+			a
 				display flex
-			.search-icon
-				background transparent
-				margin-left -12px
+				align-items center
+			i
+				display inline-block
+				padding-right 10px
+	.center-info
+		padding-top 20px
+		.left
+			display flex
+		.logo
+			display inline-block
+		.text
+			display inline-block
+			width 200px
+			padding-top 14px
+			margin-left 30px
+			color COLOR_BRAND_GREY
+			font 300 14px / 1.4 'Roboto'
+	form
+		display inline-block
+		padding 5px
+		border 1px solid COLOR_BRAND_LIGHT_BLUE
+		input
+			width 220px
+			padding 10px
+			color COLOR_BRAND_GREY2
+			font 400 14px / 1.4 'Roboto'
+		button
+			padding 8px 20px
+			text-transform uppercase
+			color COLOR_BRAND_WHITE
+			font 400 15px / 1.4 'Roboto'
+			background COLOR_BRAND_PINK
+	.center-info
+		display flex
+		justify-content space-between
+		flex-wrap wrap
+		align-items center
+		.left, form, .cart
+			margin 5px
+	.cart
+		margin-left auto !important
+		.cart-icon
+			float left
+			display inline-block
+			margin-right 7px
+		.top
+			display inline-block
+			margin-right 5px
+			font 400 15px / 1.4 'Roboto'
+			text-transform uppercase
+		a
+			padding 2px 4px
+			font 300 12px / 1.4 'Roboto'
+			color COLOR_BRAND_WHITE
+			background COLOR_BRAND_BLUE
+		.text-items-cart, .bottom
+			font 300 12px / 1.4 'Roboto'
+@media (max-width: 600px)
+	.main-header
+		form
+			margin 10px auto !important
 			input
-				width 130px
-				color COLOR_BRAND_DARK_GREY
-				padding-right 15px
-				font 300 15px / 1.2 'Catamaran'
-
+				width 150px
+		.top-actions
+			.consult
+				margin auto
+		.center-info
+			.left
+				margin auto
+				flex-direction column
