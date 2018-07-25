@@ -18,7 +18,9 @@
 			color COLOR_BRAND_BLUE
 			font 400 14px / 1.4 Roboto
 			span
+				color COLOR_BRAND_BLUE
 				padding-left 5px
+			a
 				color COLOR_BRAND_BLACK
 		.personal-area
 			margin-left auto
@@ -43,7 +45,7 @@
 			margin-left 30px
 			color COLOR_BRAND_GREY
 			font 300 14px / 1.4 'Roboto'
-	form
+	form.desktop-search ,form.mobile-search
 		display inline-block
 		padding 5px
 		border 1px solid COLOR_BRAND_LIGHT_BLUE
@@ -63,7 +65,7 @@
 		justify-content space-between
 		flex-wrap wrap
 		align-items center
-		.left, form, .cart
+		.left, form.desktop-search, .cart
 			margin 5px
 	.cart
 		.cart-icon
@@ -103,20 +105,40 @@
 	.center-menu li
 		font 300 16px / 1.4 'Roboto'
 	.bottom-navigation
-		display flex
-		justify-content space-between
-		align-items center
+		position relative
 		margin-top 15px
 		padding 7px 0
 		border-top 1px solid COLOR_BRAND_GREY3
 		border-bottom 1px solid COLOR_BRAND_GREY3
-		ul
+		.mobile-nav-wrapper
+			display none
+			.menu
+				position absolute
+				top 100%
+				left 0
+			p
+				display flex
+				align-items center
+				text-transform uppercase
+				font 700 16px / 1.4 'Roboto'
+				color COLOR_BRAND_BLUE
+			img
+				cursor pointer
+				display inline-block
+				margin-right 10px
+				width 25px
+				height 23px
+		.desktop-nav-wrapper
 			display flex
+			justify-content space-between
 			align-items center
-			flex-wrap wrap
-		li
-			&:not(:last-of-type)
-				margin-right 20px
+			ul
+				display flex
+				align-items center
+				flex-wrap wrap
+			li
+				&:not(:last-of-type)
+					margin-right 20px
 	.catalog
 		width 200px
 		flex-shrink 0
@@ -129,20 +151,71 @@
 		img
 			display inline-block
 			margin-right 5px
+	.mobile-nav-wrapper
+		form.mobile-search
+			display flex
+			width 100%
+			input
+				width 100%
+		.dropdown
+			display none
+			margin-top 11px
+		.menu
+			display none
+			width 100%
+			z-index 999
+			li
+				position relative
+				padding 15px
+				font 400 14px / 1.4 'Roboto'
+				color COLOR_BRAND_GREY2
+				border-bottom 1px solid COLOR_BRAND_GREY4
+				background COLOR_BRAND_WHITE
+				&.with-dropdown
+					&:after
+						content ''
+						position absolute
+						top 20px
+						width 5px
+						right 10px
+						height @width
+						border-top 1px solid COLOR_BRAND_BLACK
+						border-right 1px solid COLOR_BRAND_BLACK
+						transform rotate(135deg)
+				&:hover
+					background COLOR_BRAND_GREY4
 @media (max-width: 1100px)
 	.main-header
+		.center-info
+			.text
+				display none
 		.cart
 			margin-left auto !important
+@media (max-width: 900px)
+	.main-header
+		form.desktop-search input
+			width 150px
+		.top-actions
+			.nav
+				display none
+@media (max-width: 800px)
+	.main-header
+		form.desktop-search
+			display none
+		.bottom-navigation
+			.desktop-nav-wrapper
+				display none
+			.mobile-nav-wrapper
+				display flex
 @media (max-width: 600px)
 	.main-header
-		form
+		form.desktop-search
 			margin 10px auto !important
 			input
 				width 150px
-		.top-actions
-			.consult
-				margin auto
 		.center-info
 			.left
 				margin auto
 				flex-direction column
+		.consult span
+			display none

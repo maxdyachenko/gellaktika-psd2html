@@ -1,15 +1,66 @@
 .main-content-wrapper
-	padding-left 220px
+	padding-left 20px
+	overflow hidden
 	.advantages
 		display flex
 		justify-content space-between
-		flex-wrap wrap
+		margin-top 30px
 		.item
 			display flex
+			flex-wrap wrap
 			flex-basis 230px
 			padding 10px
 		.icon
+			padding-bottom 7px
 			margin-right 15px
 			flex-shrink 0
 		.text
 			font 400 14px / 1.4 'Roboto'
+	.owl-theme .owl-nav [class*=owl-]
+		background transparent
+		&:hover
+			background transparent !important
+	.owl-dots
+		padding-top 20px
+	.owl-nav
+		position absolute
+		width 100%
+		height 100%
+		top 0
+		left 0
+	.owl-carousel
+		.control
+			position absolute
+			top 50%
+			transform translateY(-100%)
+			left 20px
+			width 36px
+			height @width
+			background url(../images/control.png) 0 0/ contain no-repeat
+			&.right
+				left auto
+				right 20px
+				transform translateY(-100%) rotate(180deg)
+		.item
+			width 100%
+			height 300px
+			background black
+	.owl-dot span
+		width 15px !important
+		height @width
+		background transparent !important
+		border 1px solid COLOR_BRAND_PINK
+	.owl-dot.active span
+		background COLOR_BRAND_PINK !important
+	.card-product
+		padding 15px
+		border 1px solid COLOR_BRAND_GREY3
+@media (max-width: 800px)
+	.main-content-wrapper
+		padding-left 0
+@media (max-width: 500px)
+	.main-content-wrapper
+		.advantages
+			flex-wrap wrap
+			.item
+				flex-basis 50%
