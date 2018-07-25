@@ -1,0 +1,63 @@
+aside
+	float left
+	width 200px
+	nav
+		padding 10px 10px 10px 25px
+		border 1px solid COLOR_BRAND_GREY3
+		li
+			position relative
+			margin-top 20px
+			padding-left 10px
+			font 300 14px / 1.4 'Roboto'
+			&:before
+				content ''
+				position absolute
+				left 0
+				height 25px
+				bottom 100%
+				border-left 1px solid COLOR_BRAND_GREY4
+			&.active
+				color COLOR_BRAND_BLUE
+				&:after
+					content ''
+					position absolute
+					left -2px
+					bottom 100%
+					width 5px
+					height 5px
+					border-radius 50%
+					background COLOR_BRAND_PINK2
+	.news
+		margin-top 15px
+		padding 15px 10px
+		border 1px solid COLOR_BRAND_GREY3
+		.title, footer
+			text-align center
+		.title
+			text-transform uppercase
+			color COLOR_BRAND_LIGHT_BLUE
+			padding-bottom 10px
+			border-bottom 1px solid COLOR_BRAND_GREY3
+			font 400 15px / 1.4 'Roboto'
+		.content
+			padding 15px 0
+			border-bottom 1px solid COLOR_BRAND_GREY3
+			li
+				position relative
+				padding-left 15px
+				font 300 14px / 1.4 'Roboto'
+				&:not(:last-of-type)
+					margin-bottom 15px
+				&:before
+					content ''
+					position absolute
+					left 0
+					top 5px
+					width 8px
+					height 8px
+					border-radius 50%
+					background COLOR_BRAND_PINK2
+		footer
+			padding-top 15px
+			color COLOR_BRAND_GREY
+			font 400 15px / 1.4 'Roboto'

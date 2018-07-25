@@ -66,11 +66,12 @@
 		.left, form, .cart
 			margin 5px
 	.cart
-		margin-left auto !important
 		.cart-icon
 			float left
 			display inline-block
 			margin-right 7px
+			width 40px
+			height 54px
 		.top
 			display inline-block
 			margin-right 5px
@@ -83,6 +84,55 @@
 			background COLOR_BRAND_BLUE
 		.text-items-cart, .bottom
 			font 300 12px / 1.4 'Roboto'
+	.socials
+		display table
+		flex-shrink 0
+		.icons, .icons a
+			display inline-block
+		.icons
+			display table-cell
+			vertical-align middle
+			a
+				margin-right 5px
+		.title
+			display table-cell
+			vertical-align middle
+			padding-right 10px
+			color COLOR_BRAND_GREY
+			font 300 14px / 1.4 'Roboto'
+	.center-menu li
+		font 300 16px / 1.4 'Roboto'
+	.bottom-navigation
+		display flex
+		justify-content space-between
+		align-items center
+		margin-top 15px
+		padding 7px 0
+		border-top 1px solid COLOR_BRAND_GREY3
+		border-bottom 1px solid COLOR_BRAND_GREY3
+		ul
+			display flex
+			align-items center
+			flex-wrap wrap
+		li
+			&:not(:last-of-type)
+				margin-right 20px
+	.catalog
+		width 200px
+		flex-shrink 0
+		p
+			display flex
+			align-items center
+			color COLOR_BRAND_BLUE
+			text-transform uppercase
+			font 400 15px / 1.4 'Roboto'
+		img
+			display inline-block
+			margin-right 5px
+@media (max-width: 1100px)
+	.main-header
+		.cart
+			margin-left auto !important
 @media (max-width: 600px)
 	.main-header
 		form
