@@ -29,7 +29,91 @@ input
 main
 	display flex
 	margin-top 15px
-
+.arrows-wrapper
+	position absolute
+	top 10px
+	left 10px
+.product-arrow
+	display inline-block
+	position relative
+	padding 5px 8px
+	height 24px
+	margin-bottom 5px
+	color COLOR_BRAND_WHITE
+	letter-spacing .3px
+	font 400 12px / 1.4 ' Roboto'
+	&:after
+		content ''
+		position absolute
+		top 0
+		left 100%
+		width 8px
+		height 24px
+	&.green-arrow
+		background COLOR_BRAND_GREEN
+		&:after
+			background url(../images/green-arrow.png) 0 0 /contain no-repeat
+	&.blue-arrow
+		background COLOR_BRAND_LIGHT_BLUE
+		&:after
+			background url(../images/blue-arrow.png) 0 0 /contain no-repeat
+	&.orange-arrow
+		background COLOR_BRAND_ORANGE
+		&:after
+			background url(../images/orange-arrow.png) 0 0 /contain no-repeat
+.product-in-card
+	display inline-table
+	padding 6px 20px
+	font 400 12px / 1.4 'Roboto'
+	text-align center
+	border 1px solid COLOR_BRAND_BLUE
+	border-radius 30px
+	background COLOR_BRAND_WHITE
+	transition all .3s
+	.underlined
+		text-decoration underline
+		color COLOR_BRAND_BLUE
+.counter
+	margin 5px auto
+	user-select none
+	display inline-block
+	border 1px solid COLOR_BRAND_GREY6
+	color COLOR_BRAND_GREY
+	font 400 12px / 1.4 'Roboto'
+	span
+		display inline-block
+		width 25px
+		height @width
+		line-height 25px
+		text-align center
+		font-size 15px
+	.value
+		display inline-block
+		text-align center
+		padding 0 7px
+		line-height 25px
+		border-left 1px solid COLOR_BRAND_GREY6
+		border-right 1px solid COLOR_BRAND_GREY6
+.into-card-button
+	margin 5px auto
+	display block
+	padding 6px 8px
+	text-transform uppercase
+	color COLOR_BRAND_WHITE
+	background COLOR_BRAND_BLUE
+.add-to-favorites
+	display flex
+	justify-content center
+	align-items center
+	border-radius 50%
+	width 36px
+	height @width
+	background COLOR_BRAND_GREY3
+	transition all .3s
+	&.added
+		opacity 1 !important
+	&:hover
+		background COLOR_BRAND_GREY2
 .container
 	overflow hidden
 	max-width 1180px

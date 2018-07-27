@@ -34,4 +34,35 @@ $(document).ready(function () {
         menuToOpen.slideToggle(300);
     });
 
+    $('#js-thumbs img').click(function () {
+        var bigSrc = $(this).data('big-src');
+        $('#js-thumbs img').removeClass('active');
+        $(this).addClass('active');
+        $('#js-product img').attr('src', bigSrc)
+    });
+
+    $('.rate-star').click(function () {
+        var currentRate = $('.voted').length;
+        var clickedRate = $(this).data('value');
+
+        var newRate = Math.ceil((currentRate + clickedRate) / 2);
+        $('.rate-star').removeClass('voted');
+
+        for (var i=0;i<newRate;i++){
+            $($('.rate-star')[i]).addClass('voted')
+        }
+
+        $('.rate-wrapper').addClass('disabled');
+    });
+
+    $('.js-toggle-tab').click(function () {
+        var tab = $(this).data('tab');
+        $('.js-toggle-tab').removeClass('active');
+        $('.js-tab-handler').removeClass('active');
+        $(this).addClass('active');
+
+        $('.js-tab-handler[data-tab="' + tab +'"]').addClass('active')
+    });
+
+
 });

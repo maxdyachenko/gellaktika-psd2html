@@ -1,0 +1,166 @@
+.product-card-wrapper
+	width 100%
+	h1
+		font 500 32px / 1.4 'Roboto'
+	.left ,.right
+		flex-basis 50%
+	.card-content
+		margin-top 20px
+		.card
+			width 100%
+			display flex
+			margin-top 20px
+			border 1px solid COLOR_BRAND_GREY3
+			padding 50px
+	.rate-wrapper.disabled
+		pointer-events none
+	.rate
+		display flex
+		align-items center
+		p
+			margin-right 10px
+	.rate-star
+		cursor pointer
+		display inline-block
+		width 21px
+		height 19px
+		background url(../images/star-icon.png) 0 0 / contain no-repeat
+		&.voted
+			background url(../images/star-voted-icon.png) 0 0 / contain no-repeat
+	.right
+		.info
+			border-bottom 1px solid COLOR_BRAND_GREY
+			.text
+				display flex
+				justify-content space-between
+				align-items center
+				flex-wrap wrap
+				padding-bottom 20px
+				font 700 12px / 1.4 'Roboto'
+				color COLOR_BRAND_GREY7
+				span
+					font-weight 400
+	.main-image
+		position relative
+		img
+			margin auto
+	.thumbs
+		display flex
+		justify-content center
+		margin-top 30px
+		cursor pointer
+		.active
+			border 2px solid COLOR_BRAND_PINK
+	.navigation-links
+		display flex
+		margin-top 10px
+		color COLOR_BRAND_GREY5
+		font 400 12px / 1.4 'Roboto'
+		span
+			display inline-block
+			margin 0 5px
+	.bottom
+		margin-top 20px
+		.price
+			font 500 28px / .8 'Roboto'
+		.quantity
+			font 400 10px / 1.4 'Roboto'
+			color COLOR_BRAND_GREY
+	.add-to-card
+		display flex
+		flex-wrap wrap
+		margin-top 20px
+		.counter
+			margin 5px 10px 5px 5px
+			align-self flex-start
+			flex-shrink 0
+			.value, span
+				width 35px
+				height 35px
+				line-height 35px
+		button
+			margin 5px
+		.hold-over
+			margin 5px 0 5px auto
+			a
+				display flex
+				align-items center
+				margin-left auto
+			span
+				margin-left 10px
+				text-decoration underline
+				color COLOR_BRAND_GREY7
+				font 400 12px / 1.4 'Roboto'
+	.product-in-card
+		margin-top 35px
+	.delivery-link
+		display block
+		margin-top 40px
+		text-decoration underline
+		color COLOR_BRAND_GREY7
+		font 400 12px / 1.4 'Roboto'
+
+	.tabs-wrapper
+		margin-top 40px
+		font 300 14px / 1.4 'Roboto'
+		.content
+			padding 40px 20% 20px 40px
+			border 1px solid COLOR_BRAND_BLACK
+			.js-tab-handler
+				display none
+				&.active
+					display block
+		.top-definitions
+			margin-bottom 30px
+		.header
+			display flex
+			cursor pointer
+			p
+				position relative
+				margin-right 5px
+				padding 10px 20px
+				color COLOR_BRAND_GREY2
+				font 400 16px / 1.4 'Roboto'
+				background COLOR_BRAND_WHITE2
+				&.active
+					border-top 1px solid COLOR_BRAND_BLACK
+					border-right 1px solid COLOR_BRAND_BLACK
+					border-left 1px solid COLOR_BRAND_BLACK
+					border-bottom 2px solid transparent
+					background COLOR_BRAND_WHITE
+					color COLOR_BRAND_BLACK
+					&:after
+						position absolute
+						content ''
+						top 100%
+						left 0
+						width 100%
+						border-bottom 7px solid COLOR_BRAND_WHITE
+	.recomendations-block
+		margin 40px 0
+		h2
+			margin-bottom 20px
+			margin-left 10px
+		.card-product
+			.product-in-card
+				margin-top 0
+@media (max-width: 768px)
+	.product-card-wrapper .tabs-wrapper .header
+		flex-wrap wrap
+		p
+			margin 5px
+			&.active
+				border 1px solid COLOR_BRAND_BLACK
+				&:after
+					content none
+@media (max-width: 600px)
+	.product-card-wrapper
+		.rate p
+			display none
+		.card-content .card
+			flex-wrap wrap
+			padding 20px
+		.thumbs, .product-in-card, .delivery-link
+			display none
+		.left ,.right
+			flex-basis 100%
