@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="./css/app.css">
     <link rel="stylesheet" href="./css/owlcarousel/owl.carousel.min.css">
     <link rel="stylesheet" href="./css/owlcarousel/owl.theme.default.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/fancybox/fancybox.css">
+    <base href="/">
 </head>
 <body>
 <div class="container">
@@ -177,16 +179,34 @@
                                     <div class="product-arrow green-arrow">Новинка</div>
                                 </div>
                             </div>
-                            <img src="https://canni-gdcoco.com/upload/resize_cache/iblock/aba/340_340_140cd750bba9870f18aada2478b24840a/aba02ff33f387003d954fddb165227f7.jpg"
-                                 alt="Product">
+                            <ul>
+                                <li data-order="1">
+                                    <a
+                                        data-fancybox="slider"
+                                        href="https://canni-gdcoco.com/upload/resize_cache/iblock/aba/340_340_140cd750bba9870f18aada2478b24840a/aba02ff33f387003d954fddb165227f7.jpg"
+                                    >
+                                        <img src="https://canni-gdcoco.com/upload/resize_cache/iblock/aba/340_340_140cd750bba9870f18aada2478b24840a/aba02ff33f387003d954fddb165227f7.jpg"
+                                             alt="Product">
+                                    </a>
+                                </li>
+                                <li data-order="2">
+                                    <a
+                                        data-fancybox="slider"
+                                        href="https://canni-gdcoco.com/upload/resize_cache/iblock/686/340_340_140cd750bba9870f18aada2478b24840a/6860ed273973f9886fde338e42c95f89.jpg"
+                                    >
+                                        <img src="https://canni-gdcoco.com/upload/resize_cache/iblock/686/340_340_140cd750bba9870f18aada2478b24840a/6860ed273973f9886fde338e42c95f89.jpg"
+                                             alt="Product">
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
                         <div class="thumbs" id="js-thumbs">
-                            <img data-big-src="https://canni-gdcoco.com/upload/resize_cache/iblock/aba/340_340_140cd750bba9870f18aada2478b24840a/aba02ff33f387003d954fddb165227f7.jpg"
+                            <img data-order="1"
                                  src="https://canni-gdcoco.com/upload/resize_cache/iblock/aba/50_50_140cd750bba9870f18aada2478b24840a/aba02ff33f387003d954fddb165227f7.jpg"
                                  alt="Preview"
                                  class="active"
                             >
-                            <img data-big-src="https://canni-gdcoco.com/upload/resize_cache/iblock/686/340_340_140cd750bba9870f18aada2478b24840a/6860ed273973f9886fde338e42c95f89.jpg"
+                            <img data-order="2"
                                  src="https://canni-gdcoco.com/upload/resize_cache/iblock/686/50_50_140cd750bba9870f18aada2478b24840a/6860ed273973f9886fde338e42c95f89.jpg"
                                  alt="Preview">
                         </div>
@@ -468,6 +488,7 @@
         crossorigin="anonymous"></script>
 <script src="./js/owl.carousel.min.js"></script>
 <script type="text/javascript" src="./js/index.js"></script>
+<script src="./js/jquery.fancybox.min.js"></script>
 
 </body>
 </html>

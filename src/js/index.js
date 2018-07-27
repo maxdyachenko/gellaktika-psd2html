@@ -35,10 +35,11 @@ $(document).ready(function () {
     });
 
     $('#js-thumbs img').click(function () {
-        var bigSrc = $(this).data('big-src');
+        var order = $(this).data('order');
         $('#js-thumbs img').removeClass('active');
         $(this).addClass('active');
-        $('#js-product img').attr('src', bigSrc)
+        $('#js-product li').css('display', 'none');
+        $('#js-product li[data-order=' + order + ']').css('display', 'block');
     });
 
     $('.rate-star').click(function () {

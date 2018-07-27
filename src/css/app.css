@@ -873,6 +873,9 @@ aside .news footer {
 .product-card-wrapper .main-image {
   position: relative;
 }
+.product-card-wrapper .main-image li:not(:first-of-type) {
+  display: none;
+}
 .product-card-wrapper .main-image img {
   margin: auto;
 }
