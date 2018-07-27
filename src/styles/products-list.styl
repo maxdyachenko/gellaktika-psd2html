@@ -1,0 +1,77 @@
+.products-list
+	.cards-wrapper
+		margin-top 30px
+	.pagination
+		text-align center
+		margin-top 40px
+		color COLOR_BRAND_GREY5
+		font 400 12px / 1.4 'Roboto'
+	.page, .rest-page
+		display inline-block
+		width 32px
+		height @width
+		text-align center
+		line-height @width
+		background COLOR_BRAND_GREY8
+		cursor pointer
+		&.active
+			background COLOR_BRAND_LIGHT_BLUE
+	.left, .right
+		display inline-block
+		width 12px
+		height @width
+		line-height 32px
+		border-top 2px solid COLOR_BRAND_GREY6
+		border-right 2px solid COLOR_BRAND_GREY6
+	.right
+		margin-left 10px
+		transform rotate(45deg)
+	.left
+		margin-right 10px
+		transform rotate(-135deg)
+	.filter
+		margin-top 25px
+		padding 25px 35px
+		background COLOR_BRAND_WHITE3
+		.footer
+			margin-top 20px
+			button
+				padding 10px 20px
+				color COLOR_BRAND_WHITE
+				text-align center
+				font 400 15px / 1.4 'Roboto'
+				text-transform uppercase
+				background COLOR_BRAND_BLUE
+			a
+				margin-left 15px
+				font 400 15px / 1.4 'Roboto'
+				color COLOR_BRAND_GREY5
+				text-decoration underline
+	.color-block
+		margin-top 25px
+	.rest-page
+		background transparent
+	.filter-name
+		margin-bottom 15px
+		color COLOR_BRAND_BLACK
+		font 400 18px / 1.4 'Roboto'
+	.nails-block
+		.nail
+			cursor pointer
+			display inline-block
+			margin-right 3px
+			padding 3px 5px
+			transition all .3s
+			&.active, &:hover
+				border 1px solid COLOR_BRAND_BLUE
+				background COLOR_BRAND_WHITE
+	.action-block
+		font 300 14px / 1.4 'Roboto'
+		span
+			display inline-block
+			margin 0 10px
+		input
+			padding 7px 0 7px 15px
+			width 120px
+			border-radius 10px
+			border 1px solid COLOR_BRAND_GREY5
