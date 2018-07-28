@@ -42,7 +42,10 @@
 				font 400 15px / 1.4 'Roboto'
 				text-transform uppercase
 				background COLOR_BRAND_BLUE
-			a
+			p
+				padding 5px 0
+				cursor pointer
+				display inline-block
 				margin-left 15px
 				font 400 15px / 1.4 'Roboto'
 				color COLOR_BRAND_GREY5
@@ -56,6 +59,10 @@
 		color COLOR_BRAND_BLACK
 		font 400 18px / 1.4 'Roboto'
 	.nails-block
+		input[type='checkbox']
+			display none
+		.disabled
+			pointer-events none
 		.nail
 			cursor pointer
 			display inline-block
@@ -66,12 +73,45 @@
 				border 1px solid COLOR_BRAND_BLUE
 				background COLOR_BRAND_WHITE
 	.action-block
+		display flex
+		justify-content space-between
+		flex-wrap wrap
+		align-items center
 		font 300 14px / 1.4 'Roboto'
 		span
 			display inline-block
 			margin 0 10px
-		input
+		.price-down, .price-up
 			padding 7px 0 7px 15px
 			width 120px
 			border-radius 10px
 			border 1px solid COLOR_BRAND_GREY5
+	.slider
+		width 510px
+		#min, #max
+			position relative
+			top -23px
+			left -5px
+			font 300 14px / 1.4 'Roboto'
+			color COLOR_BRAND_BLACK
+		&.ui-widget-content
+			height 3px
+			border none
+			background COLOR_BRAND_BLUE
+			border-radius 0
+		.ui-widget-header
+			background COLOR_BRAND_LIGHT_BLUE2
+		.ui-slider-handle
+			margin 0
+			width 14px
+			height @width
+			border-radius 50%
+			outline none
+			background COLOR_BRAND_BLUE
+@media (max-width: 1130px)
+	.products-list .slider
+		margin-top 40px
+
+@media (max-width: 400px)
+	.products-list .action-block .price-down, .products-list .action-block .price-up
+		width 40%

@@ -49,7 +49,7 @@ $(document).ready(function () {
         var newRate = Math.ceil((currentRate + clickedRate) / 2);
         $('.rate-star').removeClass('voted');
 
-        for (var i=0;i<newRate;i++){
+        for (var i = 0; i < newRate; i++) {
             $($('.rate-star')[i]).addClass('voted')
         }
 
@@ -62,8 +62,86 @@ $(document).ready(function () {
         $('.js-tab-handler').removeClass('active');
         $(this).addClass('active');
 
-        $('.js-tab-handler[data-tab="' + tab +'"]').addClass('active')
+        $('.js-tab-handler[data-tab="' + tab + '"]').addClass('active')
     });
 
+    $('.js-nail-handler').click(function () {
+        event.preventDefault();
+        if ($(this).hasClass('.disabled')) return;
+
+        $(this).toggleClass('active');
+        $(this).find('input').attr('checked', true);
+    });
+
+
+    var input1 = $('.price-down');
+    var input2 = $('.price-up');
+
+    var values = [$('#min').html(), $('#max').html()];
+
+    input1.change(function () {
+        $('.slider').slider("values", 0, $(this).val());
+
+    });
+
+    input2.change(function () {
+        $('.slider').slider("values", 1, $(this).val());
+
+    });
+
+    $('.slider').slider({
+        range: true,
+        min: parseInt(values[0]),
+        max: parseInt(values[1]),
+        step: 10,
+        values: values,
+        animate: 'slow',
+        create: function () {
+            $('#min').appendTo($('.slider span').get(0));
+            $('#max').appendTo($('.slider span').get(1));
+        },
+        change: function (event, ui) {
+            $(ui.handle).find('a').html('' + ui.value);
+
+            var index = $(ui)[0].handleIndex;
+            var value = ui.value;
+        },
+        slide: function (event, ui) {
+            $(ui.handle).find('a').html('' + ui.value);
+
+            var index = $(ui)[0].handleIndex;
+            var value = ui.value;
+
+            if (index === 0)
+                input1.val(value);
+            else
+                input2.val(value);
+        }
+    });
+
+// only initially needed
+    $('#min').html('' + $('.slider').slider('values', 0)).position({
+        my: 'center top',
+        at: 'center bottom',
+        of: $('.slider span:eq(0)'),
+        offset: "0, 10"
+    });
+
+    $('#max').html('' + $('.slider').slider('values', 1)).position({
+        my: 'center top',
+        at: 'center bottom',
+        of: $('.slider span:eq(1)'),
+        offset: "0, 10"
+    });
+
+
+    $('.js-reset').click(function () {
+        input1.val('');
+        input2.val('');
+        $('.slider').slider( "values", values );
+
+        $('.js-nail-handler').removeClass('active');
+        $('.js-nail-handler').find('input').attr('checked', false);
+    });
 
 });

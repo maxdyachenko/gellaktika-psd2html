@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./css/app.css">
     <link rel="stylesheet" href="./css/owlcarousel/owl.carousel.min.css">
     <link rel="stylesheet" href="./css/owlcarousel/owl.theme.default.min.css">
+    <link rel="stylesheet" href="./css/jquery-ui.min.css">
 </head>
 <body>
 <div class="container">
@@ -169,55 +170,86 @@
             </div>
             <div class="products-list-content">
                 <h1>Сanni Colors Основные</h1>
-                <div class="filter">
+                <form class="filter">
                     <div class="price-block">
                         <p class="filter-name">Выберите стоимость</p>
                         <div class="action-block">
                             <div class="form">
-                                <input type="text" value="120">
+                                <input pattern="^[0-9]*$" class="price-down" type="number" value="">
                                 <span>-</span>
-                                <input type="text" value="160">
+                                <input pattern="^[0-9]*$" class="price-up" type="number" value="">
                             </div>
-                            <div class="slider"></div>
+                            <div class="slider">
+
+                            </div>
+                            <a id="min">100</a><!-- здесь указать минимальное и максимальное значения для слайдера -->
+                            <a id="max">5000</a>
                         </div>
                     </div>
                     <div class="color-block">
                         <p class="filter-name">Выберите цвет</p>
                         <div class="nails-block">
-                            <div class="nail active">
-                                <img src="./images/nail-no-color.png" alt="Nail">
+                            <div class="nail js-nail-handler">
+                                <label for="white-nail">
+                                    <input type="checkbox" name="white-nail" id="white-nail">
+                                    <img src="./images/nail-no-color.png" alt="Nail">
+                                </label>
                             </div>
-                            <div class="nail">
-                                <img src="./images/orange-nail.png" alt="Nail">
+                            <div class="nail js-nail-handler">
+                                <input type="checkbox" name="orange-nail" id="orange-nail">
+                                <label for="orange-nail">
+                                    <img src="./images/orange-nail.png" alt="Nail">
+                                </label>
                             </div>
-                            <div class="nail">
-                                <img src="./images/blue-nail.png" alt="Nail">
+                            <div class="nail js-nail-handler">
+                                <input type="checkbox" name="blue-nail" id="blue-nail">
+                                <label for="blue-nail">
+                                    <img src="./images/blue-nail.png" alt="Nail">
+                                </label>
                             </div>
-                            <div class="nail">
-                                <img src="./images/green-nail.png" alt="Nail">
+                            <div class="nail js-nail-handler">
+                                <input type="checkbox" name="green-nail" id="green-nail">
+                                <label for="green-nail">
+                                    <img src="./images/green-nail.png" alt="Nail">
+                                </label>
                             </div>
-                            <div class="nail">
-                                <img src="./images/red-nail.png" alt="Nail">
+                            <div class="nail js-nail-handler">
+                                <input type="checkbox" name="red-nail" id="red-nail">
+                                <label for="red-nail">
+                                    <img src="./images/red-nail.png" alt="Nail">
+                                </label>
                             </div>
-                            <div class="nail">
-                                <img src="./images/nail-no-color.png" alt="Nail">
+                            <div class="nail js-nail-handler disabled">
+                                <input type="checkbox" name="nail-no-color" id="nail-no-color">
+                                <label for="nail-no-color">
+                                    <img src="./images/nail-no-color.png" alt="Nail">
+                                </label>
                             </div>
-                            <div class="nail">
-                                <img src="./images/nail-no-color.png" alt="Nail">
+                            <div class="nail js-nail-handler disabled">
+                                <input type="checkbox" name="nail-no-color2" id="nail-no-color2">
+                                <label for="nail-no-color2">
+                                    <img src="./images/nail-no-color.png" alt="Nail">
+                                </label>
                             </div>
-                            <div class="nail">
-                                <img src="./images/nail-no-color.png" alt="Nail">
+                            <div class="nail js-nail-handler disabled">
+                                <input type="checkbox" name="nail-no-color3" id="nail-no-color3">
+                                <label for="nail-no-color3">
+                                    <img src="./images/nail-no-color.png" alt="Nail">
+                                </label>
                             </div>
-                            <div class="nail">
-                                <img src="./images/nail-no-color.png" alt="Nail">
+                            <div class="nail js-nail-handler disabled">
+                                <input type="checkbox" name="nail-no-color4" id="nail-no-color4">
+                                <label for="nail-no-color4">
+                                    <img src="./images/nail-no-color.png" alt="Nail">
+                                </label>
                             </div>
                         </div>
                     </div>
                     <div class="footer">
                         <button>Подобрать</button>
-                        <a href="#">Сбросить</a>
+                        <p class="js-reset">Сбросить</p>
                     </div>
-                </div>
+                </form>
                 <div class="cards-wrapper">
                     <div class="card-product">
                         <div class="card-image">
@@ -411,6 +443,7 @@
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
 <script src="./js/owl.carousel.min.js"></script>
+<script src="./js/jquery-ui.min.js"></script>
 <script type="text/javascript" src="./js/index.js"></script>
 
 </body>
