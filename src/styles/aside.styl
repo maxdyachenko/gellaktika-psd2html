@@ -1,68 +1,117 @@
 aside
 	flex-shrink 0
-	width 200px
+	width 212px
 	.banner
-		margin-top 15px
+		margin-top 30px
 	nav
-		padding 10px 10px 10px 25px
-		border 1px solid COLOR_BRAND_GREY3
 		li
 			position relative
-			margin-top 20px
-			padding-left 10px
+			padding 10px 30px 10px 14px
 			font 300 14px / 1.4 'Roboto'
-			&:before
+			flex-shrink 0
+			transition all .25s
+			cursor pointer
+			&:after
 				content ''
+				display block
 				position absolute
-				left 0
-				height 25px
-				bottom 100%
-				border-left 1px solid COLOR_BRAND_GREY4
+				top 50%
+				right 10px
+				width 7px
+				height 7px
+				transform translateY(-50%) rotate(45deg)
+				border-top 2px solid COLOR_BRAND_GREY4
+				border-right 2px solid COLOR_BRAND_GREY4
+			a
+				display block
+			&:hover
+				background COLOR_BRAND_WHITE4
+			&.blue-text, &.pink-text
+				font-weight 400
+				text-transform uppercase
+				&:after
+					content none
+			&.blue-text
+				color COLOR_BRAND_LIGHT_BLUE3
+			&.pink-text
+				color COLOR_BRAND_PINK5
 			&.active
 				color COLOR_BRAND_BLUE
 				&:after
-					content ''
-					position absolute
-					left -2px
-					bottom 100%
-					width 5px
-					height 5px
-					border-radius 50%
-					background COLOR_BRAND_PINK2
+					border-color COLOR_BRAND_BLUE
 	.news
-		margin-top 15px
-		padding 15px 10px
-		border 1px solid COLOR_BRAND_GREY3
+		margin-top 30px
+		padding 30px 20px 35px 30px
+		background COLOR_BRAND_WHITE4
 		.title, footer
 			text-align center
 		.title
 			text-transform uppercase
 			color COLOR_BRAND_LIGHT_BLUE
 			padding-bottom 10px
-			border-bottom 1px solid COLOR_BRAND_GREY3
 			font 400 15px / 1.4 'Roboto'
 		.content
-			padding 15px 0
-			border-bottom 1px solid COLOR_BRAND_GREY3
 			li
 				position relative
-				padding-left 15px
-				font 300 14px / 1.4 'Roboto'
-				&:not(:last-of-type)
-					margin-bottom 15px
+				padding 11px 0
+				font 300 15px / 1.4 'Roboto'
+				transition all .25s
+				&:hover
+					color COLOR_BRAND_PINK5
+				&:last-of-type
+					margin-bottom 20px
+					&:before
+						content none
 				&:before
 					content ''
 					position absolute
+					bottom 0
 					left 0
-					top 5px
-					width 8px
-					height 8px
-					border-radius 50%
-					background COLOR_BRAND_PINK2
+					width 45px
+					border-bottom 1px solid COLOR_BRAND_PINK5
 		footer
-			padding-top 15px
-			color COLOR_BRAND_GREY
 			font 400 15px / 1.4 'Roboto'
+			a
+				border 1px solid COLOR_BRAND_BLUE
+				padding 6px 10px
+	.fixed-fix
+		display none
+		width 212px
+		margin-top 30px
+		&.active
+			display block
+	.fixed-block
+		padding 20px 11px 90px 11px
+		margin-top 30px
+		border 1px solid COLOR_BRAND_WHITE4
+		&.fixed
+			margin-top 0
+			position fixed
+			top 0
+			left 0
+			width 212px
+			z-index 10
+		.top img
+			margin auto
+		.text, .title
+			font 300 15px / 1.4 'Roboto'
+		.title
+			font-weight 700
+		.item
+			margin-top 18px
+			text-align center
+			&:nth-of-type(1)
+				.title
+					color COLOR_BRAND_PINK4
+			&:nth-of-type(2)
+				.title
+					color COLOR_BRAND_BLUE2
+			&:nth-of-type(3)
+				.title
+					color COLOR_BRAND_GREEN2
+		.text p
+			margin-top 10px
+
 @media (max-width: 800px)
 	aside
 		display none

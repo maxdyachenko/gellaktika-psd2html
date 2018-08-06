@@ -17,25 +17,26 @@
 	.card-product
 		position relative
 		display inline-block
-		flex-basis 24%
+		width 222px
 		cursor pointer
 		transition all .3s
-		margin-bottom 10px
 		&:hover
-			border 1px solid COLOR_BRAND_BLUE
+			box-shadow 1px 1px 15px 1px rgba(COLOR_BRAND_GREY,0.3);
 			.add-to-favorites, .product-in-card
 				opacity 1
 	.card-image
-		max-width 170px
+		width 164px
+		height 164px
+		object-fit cover
 		margin auto
 	.name
-		margin-top 15px
+		margin-top 24px
 		color COLOR_BRAND_PINK3
 		font 400 14px / 1.4 'Roboto'
 		text-align center
 	.price
-		margin-top 5px
-		font 500 21px  /1.4 'Roboto'
+		margin-top 13px
+		font 500 21px  /1 'Roboto'
 		text-align center
 	.add-to-favorites
 		opacity 0
@@ -72,7 +73,7 @@
 			text-decoration underline
 			color COLOR_BRAND_BLUE
 	.card-footer
-		margin-top 15px
+		margin 14px -12px 0 -12px
 		display flex
 		justify-content space-between
 		flex-wrap wrap

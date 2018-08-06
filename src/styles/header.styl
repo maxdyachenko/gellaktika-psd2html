@@ -2,36 +2,43 @@
 	.top-actions
 		display flex
 		justify-content space-between
+		align-items center
 		flex-wrap wrap
+		padding 0 40px
+		background COLOR_BRAND_WHITE4
 		ul
 			display flex
 			flex-wrap wrap
 		li
-			flex-shrink 0
 			a
 				margin-right 30px
 				color COLOR_BRAND_DARK_BLACK
 				font 300 14px / 1.4 'Roboto'
-		.nav, .consult, .personal-area
-			padding 10px 0
+		.consult, .personal-area
+			padding 12px 0
 		.consult
-			color COLOR_BRAND_BLUE
+			display flex
 			font 400 14px / 1.4 Roboto
+			p:nth-of-type(1)
+				margin-right 30px
 			span
 				color COLOR_BRAND_BLUE
 				padding-left 5px
 			a
 				color COLOR_BRAND_BLACK
 		.personal-area
-			margin-left auto
+			display flex
 			font 300 14px / 1.4 'Roboto'
 			color COLOR_BRAND_DARK_BLACK
 			a
 				display flex
 				align-items center
+				&:nth-of-type(2)
+					margin-left 42px
+					color COLOR_BRAND_BLUE
 			i
 				display inline-block
-				padding-right 10px
+				padding-right 16px
 	.center-info
 		padding-top 20px
 		.left
@@ -41,7 +48,6 @@
 		.text
 			display inline-block
 			width 200px
-			padding-top 14px
 			margin-left 30px
 			color COLOR_BRAND_GREY
 			font 300 14px / 1.4 'Roboto'
@@ -78,12 +84,14 @@
 			display inline-block
 			margin-right 5px
 			font 400 15px / 1.4 'Roboto'
-			text-transform uppercase
 		a
 			padding 2px 4px
 			font 300 12px / 1.4 'Roboto'
 			color COLOR_BRAND_WHITE
 			background COLOR_BRAND_BLUE
+			transition all .25s
+			&:hover
+				background COLOR_BRAND_PINK4
 		.text-items-cart, .bottom
 			font 300 12px / 1.4 'Roboto'
 	.socials
@@ -95,15 +103,17 @@
 			display table-cell
 			vertical-align middle
 			a
-				margin-right 5px
+				margin-right 8px
 		.title
 			display table-cell
 			vertical-align middle
-			padding-right 10px
+			padding-right 12px
 			color COLOR_BRAND_GREY
 			font 300 14px / 1.4 'Roboto'
 	.center-menu li
-		font 300 16px / 1.4 'Roboto'
+		font 400 16px / 1.4 'Roboto'
+		color COLOR_BRAND_BLACK2
+		text-transform uppercase
 	.bottom-navigation
 		position relative
 		margin-top 15px
@@ -140,7 +150,7 @@
 				&:not(:last-of-type)
 					margin-right 20px
 	.catalog
-		width 200px
+		width 210px
 		flex-shrink 0
 		p
 			display flex
@@ -150,7 +160,7 @@
 			font 400 15px / 1.4 'Roboto'
 		img
 			display inline-block
-			margin-right 5px
+			margin-right 10px
 	.mobile-nav-wrapper
 		form.mobile-search
 			display flex
@@ -186,6 +196,8 @@
 					background COLOR_BRAND_GREY4
 @media (max-width: 1100px)
 	.main-header
+		.top-actions
+			justify-content space-around
 		.center-info
 			.text
 				display none
@@ -195,9 +207,6 @@
 	.main-header
 		form.desktop-search input
 			width 150px
-		.top-actions
-			.nav
-				display none
 @media (max-width: 800px)
 	.main-header
 		form.desktop-search

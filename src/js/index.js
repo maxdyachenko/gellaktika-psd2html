@@ -7,6 +7,22 @@ $(document).ready(function () {
         items: 1
     })
 
+    var topPosition = $('.fixed-block').offset().top;
+    var leftPosition = $('.fixed-block').offset().left;
+    $(document).on('scroll', function() {
+        if (topPosition <= $(document).scrollTop()) {
+            $('.fixed-block').addClass('fixed');
+            $('.fixed-block').css({'left':leftPosition});
+
+            $('.fixed-fix').addClass('active');
+            $('.fixed-fix').css({'height': $('.fixed-block').height()});
+        }
+        else {
+            $('.fixed-block').removeClass('fixed');
+            $('.fixed-fix').removeClass('active');
+        }
+    });
+
     $('.js-make-bigger').click(function () {
         var valueNode = $(this).closest($('.counter')).find($('.value'));
         var valueData = valueNode.html();
