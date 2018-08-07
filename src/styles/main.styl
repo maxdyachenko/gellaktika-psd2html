@@ -1,13 +1,20 @@
 .main-content-wrapper
 	padding-left 20px
+	padding-right 10px
+	margin-right -10px
 	overflow hidden
+	h2
+		color COLOR_BRAND_BLUE
+	.header-title
+		display flex
+		align-items center
+		justify-content space-between
 	.advantages
 		display flex
 		justify-content space-between
 		margin-top 30px
 		.item
 			display flex
-			flex-wrap wrap
 			flex-basis 230px
 			padding 10px
 		.icon
@@ -28,7 +35,7 @@
 		height 100%
 		top 0
 		left 0
-	.owl-carousel
+	.owl-common-styles
 		.control
 			position absolute
 			top 50%
@@ -44,10 +51,23 @@
 				left auto
 				right 20px
 				transform translateY(-100%) rotate(180deg)
+	.owl-carousel
 		.item
 			width 100%
 			max-height 330px
 			background black
+	.owl-carousel-sales
+		width 452px
+		height 656px
+		.owl-stage-outer
+			height 100%
+	.owl-carousel-news, .owl-carousel-new-products
+		max-width 452px
+		max-height 350px
+		background COLOR_BRAND_GREY4
+	.owl-carousel-new-products
+		width 49.6%
+		margin-top 10px
 	.owl-dot span
 		width 15px !important
 		height @width
@@ -66,14 +86,37 @@
 			margin-top 20px
 			width 298px
 			height @width
-			background COLOR_BRAND_LIGHT_BLUE
+			background COLOR_BRAND_GREY4
+@media (max-width: 1200px)
+	.main-content-wrapper
+		.products-content .right-products
+			flex-direction row
 @media (max-width: 1024px)
 	.main-content-wrapper
 		.static-banners
 			display none
+		.advantages .item
+			flex-wrap wrap
+@media (max-width: 955px)
+	.main-content-wrapper
+		.owl-carousel-sales
+			order -1
+			align-self center
+		.products-content
+			.cards-wrapper.with-order
+				justify-content center
+			.left-products, .right-products
+				flex-wrap wrap
+				width 100%
+				justify-content space-around
+				flex-direction row
+			.left-products
+				margin-top 55px
 @media (max-width: 800px)
 	.main-content-wrapper
 		padding-left 0
+		.owl-carousel-new-products, .owl-carousel-news, .owl-carousel-sales
+			display none !important
 @media (max-width: 500px)
 	.main-content-wrapper
 		.advantages

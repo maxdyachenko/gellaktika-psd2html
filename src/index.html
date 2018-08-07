@@ -78,23 +78,25 @@
                 <div class="menu">
                     <ul>
                         <li class="with-dropdown"><a href="#">Каталог</a>
-                            <ul class="dropdown">
-                                <li><a href="#">Canni Colors Основные</a></li>
-                                <li class="active"><a href="#">Platinum Гель-лак</a></li>
-                                <li><a href="#">Blossom Гель-лак</a></li>
-                                <li><a href="#">Termo Гель-лак</a></li>
-                                <li><a href="#">Crystal Полигель</a></li>
-                                <li><a href="#">Base/Top</a></li>
-                                <li><a href="#">Gel Paints Гель-краска</a></li>
-                                <li><a href="#">GD Гель-пластилин</a></li>
-                                <li><a href="#">CatEye "Кошачий глаз"</a></li>
-                                <li><a href="#">Жидкости</a></li>
-                                <li><a href="#">UV Builder Gel</a></li>
-                                <li><a href="#">LED/UV Color Gel</a></li>
-                                <li><a href="#">Water Based</a></li>
-                                <li><a href="#">УФ-лапмы</a></li>
-                                <li><a href="#">Зеркальная втирка</a></li>
-                            </ul>
+                            <div class="dropdown-container">
+                                <ul>
+                                    <li><a href="#">Canni Colors Основные</a></li>
+                                    <li class="active"><a href="#">Platinum Гель-лак</a></li>
+                                    <li><a href="#">Blossom Гель-лак</a></li>
+                                    <li><a href="#">Termo Гель-лак</a></li>
+                                    <li><a href="#">Crystal Полигель</a></li>
+                                    <li><a href="#">Base/Top</a></li>
+                                    <li><a href="#">Gel Paints Гель-краска</a></li>
+                                    <li><a href="#">GD Гель-пластилин</a></li>
+                                    <li><a href="#">CatEye "Кошачий глаз"</a></li>
+                                    <li><a href="#">Жидкости</a></li>
+                                    <li><a href="#">UV Builder Gel</a></li>
+                                    <li><a href="#">LED/UV Color Gel</a></li>
+                                    <li><a href="#">Water Based</a></li>
+                                    <li><a href="#">УФ-лапмы</a></li>
+                                    <li><a href="#">Зеркальная втирка</a></li>
+                                </ul>
+                            </div>
                         </li>
                         <li><a href="#"></a>Бесплатная доставка</li>
                         <li><a href="#"></a>Отзывы</li>
@@ -117,7 +119,36 @@
                     <li class="blue-text"><a href="#">Новинки</a></li>
                     <li class="pink-text"><a href="#">Скидки</a></li>
                     <li><a href="#">Гель лаки</a></li>
-                    <li class="active"><a href="#">Гелевая система</a></li>
+                    <!-- если у элемента есть выпадающий список то добавить класс with-dropdown -->
+                    <li class="active with-dropdown">
+                        <a href="#">Гелевая система</a>
+                        <div class="dropdown-container">
+                            <!-- если в списке больше 15 пунктов, то разбить этот список на несколько, чтобы в одном было максимум 15 -->
+                            <ul>
+                                <li><a href="#">Canni Colors Основные</a></li>
+                                <li><a href="#">Platinum Гель-лак</a></li>
+                                <li><a href="#">Blossom Гель-лак</a></li>
+                                <li><a href="#">Termo Гель-лак</a></li>
+                                <li><a href="#">Crystal Полигель</a></li>
+                                <li><a href="#">Base/Top</a></li>
+                                <li><a href="#">Gel Paints Гель-краска</a></li>
+                                <li><a href="#">GD Гель-пластилин</a></li>
+                                <li><a href="#">CatEye "Кошачий глаз"</a></li>
+                                <li><a href="#">Жидкости</a></li>
+                                <li><a href="#">UV Builder Gel</a></li>
+                                <li><a href="#">LED/UV Color Gel</a></li>
+                                <li><a href="#">Water Based</a></li>
+                                <li><a href="#">УФ-лапмы</a></li>
+                                <li><a href="#">Зеркальная втирка</a></li>
+                            </ul>
+                            <ul>
+                                <li><a href="#">Canni Colors Основные</a></li>
+                                <li><a href="#">Platinum Гель-лак</a></li>
+                                <li><a href="#">Blossom Гель-лак</a></li>
+                                <li><a href="#">Termo Гель-лак</a></li>
+                            </ul>
+                        </div>
+                    </li>
                     <li><a href="#">Материалы для дизайна</a></li>
                     <li><a href="#">Стразы</a></li>
                     <li><a href="#">Лампы</a></li>
@@ -153,7 +184,7 @@
                     </ul>
                 </div>
                 <footer>
-                    <a href="#">Смотреть все</a>
+                    <a class="watch-all-button" href="#">Смотреть все</a>
                 </footer>
             </div>
 
@@ -194,7 +225,7 @@
         </aside>
 
         <div class="main-content-wrapper">
-            <div class="owl-carousel owl-theme">
+            <div class="owl-common-styles owl-carousel owl-carousel-main owl-theme">
                 <div class="item">
                     <img src="https://canni-gdcoco.com/upload/iblock/b21/b2182da36997ee35e07386646bb69ebc.jpg" alt="">
                 </div>
@@ -226,9 +257,9 @@
                 </div>
                 <div class="item">
                     <div class="icon"><img src="./images/sklad-icon.png" alt="iCon"></div>
-                    <p class="text">Все товары
-                        в наличии
-                        на складе</p>
+                    <p class="text">ПОДАРОК В
+                        КАЖДОМ
+                        ЗАКАЗЕ!</p>
                 </div>
             </div>
             <div class="static-banners">
@@ -243,8 +274,22 @@
                 </div>
             </div>
             <div class="products-content">
-                <h2>Хиты продаж</h2>
+                <div class="header-title">
+                    <h2>Хиты продаж</h2>
+                    <a href="#" class="watch-all-button">Смотреть все</a>
+                </div>
                 <div class="cards-wrapper">
+                    <div class="owl-common-styles owl-carousel owl-carousel-news owl-theme">
+                        <div class="item">
+                            <img src="./images/placeholder.png" alt="">
+                        </div>
+                        <div class="item">
+                            <img src="./images/placeholder.png" alt="">
+                        </div>
+                        <div class="item">
+                            <img src="./images/placeholder.png" alt="">
+                        </div>
+                    </div>
                     <div class="card-product">
                         <div class="card-image">
                             <!--<div class="arrows-wrapper">-->
@@ -379,20 +424,276 @@
                         </footer>
                     </div>
                 </div>
-                <a class="gradient-button" href="#">смотреть все хиты продаж</a>
+            </div>
+            <div class="products-content">
+                <div class="header-title">
+                    <h2>Новинки</h2>
+                    <a href="#" class="watch-all-button">Смотреть все</a>
+                </div>
+                <div class="cards-wrapper">
+                    <div class="owl-common-styles owl-carousel owl-carousel-new-products owl-theme">
+                        <div class="item">
+                            <img src="./images/placeholder.png" alt="">
+                        </div>
+                        <div class="item">
+                            <img src="./images/placeholder.png" alt="">
+                        </div>
+                        <div class="item">
+                            <img src="./images/placeholder.png" alt="">
+                        </div>
+                    </div>
+                    <div class="owl-common-styles owl-carousel owl-carousel-new-products owl-theme">
+                        <div class="item">
+                            <img src="./images/placeholder.png" alt="">
+                        </div>
+                        <div class="item">
+                            <img src="./images/placeholder.png" alt="">
+                        </div>
+                        <div class="item">
+                            <img src="./images/placeholder.png" alt="">
+                        </div>
+                    </div>
+                    <div class="card-product">
+                        <div class="card-image">
+                            <a href="#">
+                                <img src="https://canni-gdcoco.com/upload/iblock/f57/f574935e4ee4391eaf9a0976ce3f6a84.jpg" alt="Product">
+                            </a>
+                        </div>
+                        <p class="name">
+                            CANNI Гель лак №4
+                            в ассортименте
+                        </p>
+                        <p class="price">
+                            <span>129,00 </span>руб./шт
+                        </p>
+                        <footer class="card-footer">
+                            <div class="counter">
+                                <span class="js-make-less">—</span>
+                                <p class="value">2</p>
+                                <span class="js-make-bigger">+</span>
+                            </div>
+                            <button class="into-card-button">в корзину</button>
+                        </footer>
+
+                        <div class="product-in-card">
+                            <p>В <a href="#" class="underlined">В корзине</a> <span>3 шт.</span></p>
+                        </div>
+
+                    </div>
+                    <div class="card-product">
+                        <div class="card-image">
+                            <a href="#">
+                                <img src="https://canni-gdcoco.com/upload/iblock/f57/f574935e4ee4391eaf9a0976ce3f6a84.jpg" alt="Product">
+                            </a>
+                        </div>
+                        <p class="name">
+                            CANNI Гель лак №4
+                            в ассортименте
+                        </p>
+                        <p class="price">
+                            <span>129,00 </span>руб./шт
+                        </p>
+                        <footer class="card-footer">
+                            <div class="counter">
+                                <span class="js-make-less">—</span>
+                                <p class="value">2</p>
+                                <span class="js-make-bigger">+</span>
+                            </div>
+                            <button class="into-card-button">в корзину</button>
+                        </footer>
+                    </div>
+                    <div class="card-product">
+                        <div class="card-image">
+                            <a href="#">
+                                <img src="https://canni-gdcoco.com/upload/iblock/f57/f574935e4ee4391eaf9a0976ce3f6a84.jpg" alt="Product">
+                            </a>
+                        </div>
+                        <p class="name">
+                            CANNI Гель лак №4
+                            в ассортименте
+                        </p>
+                        <p class="price">
+                            <span>129,00 </span>руб./шт
+                        </p>
+                        <footer class="card-footer">
+                            <div class="counter">
+                                <span class="js-make-less">—</span>
+                                <p class="value">2</p>
+                                <span class="js-make-bigger">+</span>
+                            </div>
+                            <button class="into-card-button">в корзину</button>
+                        </footer>
+                    </div>
+                    <div class="card-product">
+                        <div class="card-image">
+                            <!--<div class="arrows-wrapper">-->
+                            <!--<div class="wrap">-->
+                            <!--<div class="product-arrow green-arrow">Новинка</div>-->
+                            <!--</div>-->
+                            <!--<div class="wrap"><div class="product-arrow orange-arrow">Скидка</div></div>-->
+                            <!--<div class="wrap"><div class="product-arrow blue-arrow">Хит</div></div>-->
+                            <!--</div>-->
+                            <!--<div class="add-to-favorites">-->
+                            <!--<img src="./images/heart-icon.png" alt="Add to favorites">-->
+                            <!--</div>-->
+                            <a href="#">
+                                <img src="https://canni-gdcoco.com/upload/iblock/f57/f574935e4ee4391eaf9a0976ce3f6a84.jpg" alt="Product">
+                            </a>
+                        </div>
+                        <p class="name">
+                            CANNI Гель лак №4
+                            в ассортименте
+                        </p>
+                        <p class="price">
+                            <span>129,00 </span>руб./шт
+                        </p>
+                        <footer class="card-footer">
+                            <div class="counter">
+                                <span class="js-make-less">—</span>
+                                <p class="value">2</p>
+                                <span class="js-make-bigger">+</span>
+                            </div>
+                            <button class="into-card-button">в корзину</button>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+
+            <div class="products-content">
+                <div class="header-title">
+                    <h2>Распродажа!</h2>
+                    <a href="#" class="watch-all-button">Смотреть все</a>
+                </div>
+                <div class="cards-wrapper with-order">
+                    <div class="left-products">
+                        <div class="card-product">
+                            <div class="card-image">
+                                <a href="#">
+                                    <img src="https://canni-gdcoco.com/upload/iblock/f57/f574935e4ee4391eaf9a0976ce3f6a84.jpg" alt="Product">
+                                </a>
+                            </div>
+                            <p class="name">
+                                CANNI Гель лак №4
+                                в ассортименте
+                            </p>
+                            <p class="price">
+                                <span>129,00 </span>руб./шт
+                            </p>
+                            <footer class="card-footer">
+                                <div class="counter">
+                                    <span class="js-make-less">—</span>
+                                    <p class="value">2</p>
+                                    <span class="js-make-bigger">+</span>
+                                </div>
+                                <button class="into-card-button">в корзину</button>
+                            </footer>
+
+                            <div class="product-in-card">
+                                <p>В <a href="#" class="underlined">В корзине</a> <span>3 шт.</span></p>
+                            </div>
+
+                        </div>
+                        <div class="card-product">
+                            <div class="card-image">
+                                <a href="#">
+                                    <img src="https://canni-gdcoco.com/upload/iblock/f57/f574935e4ee4391eaf9a0976ce3f6a84.jpg" alt="Product">
+                                </a>
+                            </div>
+                            <p class="name">
+                                CANNI Гель лак №4
+                                в ассортименте
+                            </p>
+                            <p class="price">
+                                <span>129,00 </span>руб./шт
+                            </p>
+                            <footer class="card-footer">
+                                <div class="counter">
+                                    <span class="js-make-less">—</span>
+                                    <p class="value">2</p>
+                                    <span class="js-make-bigger">+</span>
+                                </div>
+                                <button class="into-card-button">в корзину</button>
+                            </footer>
+                        </div>
+                    </div>
+                    <div class="owl-common-styles owl-carousel owl-carousel-sales owl-theme">
+                        <div class="item">
+                            <img src="./images/placeholder-452x656.png" alt="">
+                        </div>
+                        <div class="item">
+                            <img src="./images/placeholder-452x656.png" alt="">
+                        </div>
+                        <div class="item">
+                            <img src="./images/placeholder-452x656.png" alt="">
+                        </div>
+                    </div>
+                    <div class="right-products">
+                        <div class="card-product">
+                            <div class="card-image">
+                                <a href="#">
+                                    <img src="https://canni-gdcoco.com/upload/iblock/f57/f574935e4ee4391eaf9a0976ce3f6a84.jpg" alt="Product">
+                                </a>
+                            </div>
+                            <p class="name">
+                                CANNI Гель лак №4
+                                в ассортименте
+                            </p>
+                            <p class="price">
+                                <span>129,00 </span>руб./шт
+                            </p>
+                            <footer class="card-footer">
+                                <div class="counter">
+                                    <span class="js-make-less">—</span>
+                                    <p class="value">2</p>
+                                    <span class="js-make-bigger">+</span>
+                                </div>
+                                <button class="into-card-button">в корзину</button>
+                            </footer>
+                        </div>
+                        <div class="card-product">
+                            <div class="card-image">
+                                <a href="#">
+                                    <img src="https://canni-gdcoco.com/upload/iblock/f57/f574935e4ee4391eaf9a0976ce3f6a84.jpg" alt="Product">
+                                </a>
+                            </div>
+                            <p class="name">
+                                CANNI Гель лак №4
+                                в ассортименте
+                            </p>
+                            <p class="price">
+                                <span>129,00 </span>руб./шт
+                            </p>
+                            <footer class="card-footer">
+                                <div class="counter">
+                                    <span class="js-make-less">—</span>
+                                    <p class="value">2</p>
+                                    <span class="js-make-bigger">+</span>
+                                </div>
+                                <button class="into-card-button">в корзину</button>
+                            </footer>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="about-our-shop">
+                <div class="logo">
+                    <img src="./images/bottom-logo.png" alt="Logo">
+                </div>
+                <div class="text">
+                    <h3>
+                        О нашем магазине
+                    </h3>
+                    <p>
+                        Равняться нужно на сильных и успешных. Только в этом случае становится возможным достижение успеха. Так сделала и торговая марка Canni, выбрав за свой «идеал» продукцию американской компании CND и умело её скопировав. Вообще надо сказать, что относиться пренебрежительно к подобным «клонам» из Китая по меньшей мере неправильно, ведь если бы их высокое качество ставилось под сомнение, то никто бы не стал ими заниматься и их продукция никогда не оказалась бы на полках самых престижных салонов красоты.
+                    </p>
+                </div>
             </div>
         </div>
     </main>
 
 
-    <div class="about-our-shop">
-        <h3>
-            О нашем магазине
-        </h3>
-        <p>
-            Равняться нужно на сильных и успешных. Только в этом случае становится возможным достижение успеха. Так сделала и торговая марка Canni, выбрав за свой «идеал» продукцию американской компании CND и умело её скопировав. Вообще надо сказать, что относиться пренебрежительно к подобным «клонам» из Китая по меньшей мере неправильно, ведь если бы их высокое качество ставилось под сомнение, то никто бы не стал ими заниматься и их продукция никогда не оказалась бы на полках самых престижных салонов красоты.
-        </p>
-    </div>
 
 
     <footer class="main-footer">
@@ -410,10 +711,10 @@
         <div class="socials">
             <p class="title">Мы в соц.сетях: </p>
             <div class="icons">
-                <a href="#"><i><img src="./images/vk-icon.png" alt=""></i></a>
-                <a href="#"><i><img src="./images/ok-icon.png" alt=""></i></a>
-                <a href="#"><i><img src="./images/whatsup-icon.png" alt=""></i></a>
-                <a href="#"><i><img src="./images/insta-icon.png" alt=""></i></a>
+                <a href="#"><i><img src="./images/vk-icon-grey.png" alt=""></i></a>
+                <a href="#"><i><img src="./images/ok-icon-grey.png" alt=""></i></a>
+                <a href="#"><i><img src="./images/whatsup-icon-grey.png" alt=""></i></a>
+                <a href="#"><i><img src="./images/insta-icon-grey.png" alt=""></i></a>
             </div>
         </div>
     </footer>

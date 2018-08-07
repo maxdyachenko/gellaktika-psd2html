@@ -18,6 +18,7 @@
 			padding 12px 0
 		.consult
 			display flex
+			flex-wrap wrap
 			font 400 14px / 1.4 Roboto
 			p:nth-of-type(1)
 				margin-right 30px
@@ -118,8 +119,6 @@
 		position relative
 		margin-top 15px
 		padding 7px 0
-		border-top 1px solid COLOR_BRAND_GREY3
-		border-bottom 1px solid COLOR_BRAND_GREY3
 		.mobile-nav-wrapper
 			display none
 			.menu
@@ -162,6 +161,8 @@
 			display inline-block
 			margin-right 10px
 	.mobile-nav-wrapper
+		.dropdown-container
+			margin-top 20px
 		form.mobile-search
 			display flex
 			width 100%
@@ -209,6 +210,8 @@
 			width 150px
 @media (max-width: 800px)
 	.main-header
+		.top-actions
+			padding 0 20px
 		form.desktop-search
 			display none
 		.bottom-navigation
@@ -218,6 +221,8 @@
 				display flex
 @media (max-width: 600px)
 	.main-header
+		.top-actions
+			padding 0
 		form.desktop-search
 			margin 10px auto !important
 			input
@@ -226,5 +231,3 @@
 			.left
 				margin auto
 				flex-direction column
-		.consult span
-			display none

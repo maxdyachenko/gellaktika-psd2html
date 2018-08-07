@@ -9,17 +9,20 @@
 		font 400 16px / 1.4 'Roboto'
 		color COLOR_BRAND_WHITE
 		background url(../images/gradient.jpg) 0 0 / cover no-repeat
+	.left-products ,.right-products
+		display flex
+		flex-direction column
 .cards-wrapper
 	display flex
 	justify-content space-between
 	flex-wrap wrap
-	margin-top 20px
+	padding 25px 0
 	.card-product
 		position relative
 		display inline-block
 		width 222px
 		cursor pointer
-		transition all .3s
+		transition box-shadow .3s
 		&:hover
 			box-shadow 1px 1px 15px 1px rgba(COLOR_BRAND_GREY,0.3);
 			.add-to-favorites, .product-in-card

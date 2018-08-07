@@ -4,6 +4,25 @@ aside
 	.banner
 		margin-top 30px
 	nav
+		.with-dropdown
+			.dropdown-container
+				display flex
+				position absolute
+				left 100%
+				top 0
+				background COLOR_BRAND_WHITE4
+				z-index 999
+				ul
+					width 234px
+					&:nth-of-type(n+2)
+						background COLOR_BRAND_GREY9
+				li
+					color COLOR_BRAND_BLACK
+					&:hover
+						color COLOR_BRAND_BLUE
+						background  COLOR_BRAND_WHITE
+					&:after
+						content none
 		li
 			position relative
 			padding 10px 30px 10px 14px
@@ -11,6 +30,8 @@ aside
 			flex-shrink 0
 			transition all .25s
 			cursor pointer
+			&:hover:after
+				border-color COLOR_BRAND_BLUE
 			&:after
 				content ''
 				display block
@@ -69,11 +90,6 @@ aside
 					left 0
 					width 45px
 					border-bottom 1px solid COLOR_BRAND_PINK5
-		footer
-			font 400 15px / 1.4 'Roboto'
-			a
-				border 1px solid COLOR_BRAND_BLUE
-				padding 6px 10px
 	.fixed-fix
 		display none
 		width 212px

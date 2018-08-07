@@ -1,27 +1,39 @@
 $(document).ready(function () {
-    $('.owl-carousel').owlCarousel({
+    $('.owl-carousel-main, .owl-carousel-sales').owlCarousel({
         loop: true,
         nav: true,
         navText: ['<div class="control left"></div>', '<div class="control right"></div>'],
         dots: true,
         items: 1
-    })
-
-    var topPosition = $('.fixed-block').offset().top;
-    var leftPosition = $('.fixed-block').offset().left;
-    $(document).on('scroll', function() {
-        if (topPosition <= $(document).scrollTop()) {
-            $('.fixed-block').addClass('fixed');
-            $('.fixed-block').css({'left':leftPosition});
-
-            $('.fixed-fix').addClass('active');
-            $('.fixed-fix').css({'height': $('.fixed-block').height()});
-        }
-        else {
-            $('.fixed-block').removeClass('fixed');
-            $('.fixed-fix').removeClass('active');
-        }
     });
+
+    $('.owl-carousel-news, .owl-carousel-new-products').owlCarousel({
+        loop: true,
+        nav: true,
+        navText: ['<div class="control left"></div>', '<div class="control right"></div>'],
+        dots: false,
+        items: 1
+    });
+
+    if ($('.fixed-block').length) {
+        var topPosition = $('.fixed-block').offset().top;
+        var leftPosition = $('.fixed-block').offset().left;
+        $('.fixed-block').css({'left':leftPosition});
+        $('.fixed-fix').css({'height': $('.fixed-block').height()});
+        $(document).on('scroll', function() {
+            if (topPosition <= $(document).scrollTop()) {
+                $('.fixed-block').addClass('fixed');
+                $('.fixed-block').css({'left':leftPosition});
+
+                $('.fixed-fix').addClass('active');
+                $('.fixed-fix').css({'height': $('.fixed-block').height()});
+            }
+            else {
+                $('.fixed-block').removeClass('fixed');
+                $('.fixed-fix').removeClass('active');
+            }
+        });
+    }
 
     $('.js-make-bigger').click(function () {
         var valueNode = $(this).closest($('.counter')).find($('.value'));
@@ -45,9 +57,10 @@ $(document).ready(function () {
     });
 
     $('.with-dropdown').click(function () {
-        var menuToOpen = $(this).find($('.dropdown'));
+        var menuToOpen = $(this).find($('.dropdown-container'));
 
         menuToOpen.slideToggle(300);
+        $('.with-dropdown').toggleClass('active');
     });
 
     $('#js-thumbs img').click(function () {

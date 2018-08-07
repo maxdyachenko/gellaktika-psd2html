@@ -1,10 +1,12 @@
 .about-our-shop
 	display flex
-	flex-direction column
-	margin-left auto
 	margin-top 55px
 	margin-bottom 90px
-	width 61%
+	.logo
+		margin-right 25px
+		flex-shrink 0
+		width 196px
+		height 153px
 	h3
 		font 500 25px / 1.4 'Roboto'
 	p
@@ -15,3 +17,7 @@
 		width 100%
 		margin-top 20px
 		margin-bottom 30px
+@media (max-width: 800px)
+	.about-our-shop
+		.logo
+			display none

@@ -1,5 +1,10 @@
 .product-card-wrapper
 	width 100%
+	&.main-content-wrapper
+		.advantages
+			margin-bottom 40px
+			padding 35px 10px
+			background COLOR_BRAND_WHITE2
 	.left ,.right
 		flex-basis 50%
 	.card-content
@@ -8,8 +13,7 @@
 			width 100%
 			display flex
 			margin-top 20px
-			border 1px solid COLOR_BRAND_GREY3
-			padding 50px
+			padding 30px
 	.rate-wrapper.disabled
 		pointer-events none
 	.rate
@@ -26,7 +30,9 @@
 		&.voted
 			background url(../images/star-voted-icon.png) 0 0 / contain no-repeat
 	.right
+		padding-left 10px
 		.info
+			margin-top 35px
 			border-bottom 1px solid COLOR_BRAND_GREY
 			.text
 				display flex
@@ -48,8 +54,12 @@
 	.thumbs
 		display flex
 		justify-content center
-		margin-top 30px
+		margin-top 20px
 		cursor pointer
+		img
+			margin-right 5px
+			width 52px
+			height @width
 		.active
 			border 2px solid COLOR_BRAND_PINK
 	.bottom
@@ -59,6 +69,21 @@
 		.quantity
 			font 400 10px / 1.4 'Roboto'
 			color COLOR_BRAND_GREY
+	.card-product .into-card-button
+		background  COLOR_BRAND_PINK
+	.into-card-button
+		padding 6px 10px
+		background  COLOR_BRAND_BLUE
+	.delivery
+		margin-right -30px
+		margin-top 25px
+		font 700 15px / 1.4 'Roboto'
+		.delivery-title
+			color COLOR_BRAND_PINK4
+			font-weight 700
+		.delivery-text
+			margin-top 5px
+			font-weight 300
 	.add-to-card
 		display flex
 		flex-wrap wrap
@@ -86,19 +111,15 @@
 				font 400 12px / 1.4 'Roboto'
 	.product-in-card
 		margin-top 35px
-	.delivery-link
-		display block
-		margin-top 40px
-		text-decoration underline
-		color COLOR_BRAND_GREY7
-		font 400 12px / 1.4 'Roboto'
 
 	.tabs-wrapper
 		margin-top 40px
+		margin-bottom 80px
 		font 300 14px / 1.4 'Roboto'
+		.desc
+			line-height 1.6
 		.content
 			padding 40px 20% 20px 40px
-			border 1px solid COLOR_BRAND_BLACK
 			.js-tab-handler
 				display none
 				&.active
@@ -112,16 +133,12 @@
 				position relative
 				margin-right 5px
 				padding 10px 20px
-				color COLOR_BRAND_GREY2
+				color COLOR_BRAND_WHITE
 				font 400 16px / 1.4 'Roboto'
-				background COLOR_BRAND_WHITE2
+				background COLOR_BRAND_PINK4
 				&.active
-					border-top 1px solid COLOR_BRAND_BLACK
-					border-right 1px solid COLOR_BRAND_BLACK
-					border-left 1px solid COLOR_BRAND_BLACK
-					border-bottom 2px solid transparent
 					background COLOR_BRAND_WHITE
-					color COLOR_BRAND_BLACK
+					color COLOR_BRAND_PINK4
 					&:after
 						position absolute
 						content ''
@@ -130,7 +147,7 @@
 						width 100%
 						border-bottom 7px solid COLOR_BRAND_WHITE
 	.recomendations-block
-		margin 40px 0
+		margin 10px 0
 		h2
 			margin-bottom 20px
 			margin-left 10px
@@ -143,16 +160,21 @@
 		p
 			margin 5px
 			&.active
-				border 1px solid COLOR_BRAND_BLACK
 				&:after
 					content none
 @media (max-width: 600px)
 	.product-card-wrapper
+		&.main-content-wrapper .advantages
+			padding 10px
+		.tabs-wrapper
+			margin-bottom 20px
+			.content
+				padding 10px
 		.rate p
 			display none
 		.card-content .card
 			flex-wrap wrap
-			padding 20px
+			padding 10px
 		.thumbs, .product-in-card, .delivery-link
 			display none
 		.left ,.right
