@@ -152,7 +152,6 @@ h1 {
   margin: 0 5px;
 }
 .container {
-  overflow: hidden;
   max-width: 1180px;
   margin: auto;
   padding: 0 20px;
@@ -342,7 +341,7 @@ h1 {
   font: 300 14px/1.4 'Roboto';
 }
 .main-header .center-menu li {
-  font: 400 16px/1.4 'Roboto';
+  font: 400 15px/1.4 'Roboto';
   color: #303030;
   text-transform: uppercase;
 }
@@ -711,7 +710,6 @@ aside .fixed-block .text p {
   padding-left: 20px;
   padding-right: 10px;
   margin-right: -10px;
-  overflow: hidden;
 }
 .main-content-wrapper h2 {
   color: #009ced;
@@ -772,6 +770,9 @@ aside .fixed-block .text p {
   left: auto;
   right: 20px;
   transform: translateY(-100%) rotate(180deg);
+}
+.main-content-wrapper .owl-carousel-main {
+  max-width: 912px;
 }
 .main-content-wrapper .owl-carousel .item {
   width: 100%;
@@ -1255,8 +1256,37 @@ aside .fixed-block .text p {
     flex-basis: 100%;
   }
 }
-.products-list .cards-wrapper {
+.products-list .products-list-content {
+  margin-top: 10px;
+}
+.products-list .brands-list {
+  margin-top: 20px;
+}
+.products-list .brands-list h4 {
+  margin-bottom: 15px;
+  font: 400 22px/1.4 'Roboto';
+}
+.products-list .brands-list ul {
+  columns: 4;
+  width: 83%;
+}
+.products-list .brands-list li {
+  margin-bottom: 9px;
+  color: #3fa9f5;
+  font: 400 18px/1.4 'Roboto';
+  transition: all 0.25s;
+}
+.products-list .brands-list li:hover {
+  color: #ff7bac;
+}
+.products-list .brands-list li span {
+  color: #808080;
+}
+.products-list .content-main-wrapper {
   margin-top: 30px;
+}
+.products-list .content-main-wrapper .card-title {
+  font: 400 22px/1 'Roboto';
 }
 .products-list .pagination {
   text-align: center;
@@ -1297,11 +1327,12 @@ aside .fixed-block .text p {
 }
 .products-list .filter {
   margin-top: 25px;
-  padding: 25px 35px;
+  padding: 20px 25px;
   background: #f4f4f4;
 }
 .products-list .filter .footer {
-  margin-top: 20px;
+  margin-top: 25px;
+  text-align: center;
 }
 .products-list .filter .footer button {
   padding: 10px 20px;
@@ -1321,15 +1352,24 @@ aside .fixed-block .text p {
   text-decoration: underline;
 }
 .products-list .color-block {
-  margin-top: 25px;
+  padding: 20px 25px;
+  margin: 0 -25px;
+  background: #fff;
 }
 .products-list .rest-page {
   background: transparent;
 }
 .products-list .filter-name {
-  margin-bottom: 15px;
+  margin-right: 7px;
   color: #000;
-  font: 400 18px/1.4 'Roboto';
+  font: 400 18px/1 'Roboto';
+}
+.products-list .effects .filter-name,
+.products-list .colors .filter-name {
+  margin-bottom: 20px;
+}
+.products-list .nails-block {
+  display: flex;
 }
 .products-list .nails-block input[type='checkbox'] {
   display: none;
@@ -1338,16 +1378,124 @@ aside .fixed-block .text p {
   pointer-events: none;
 }
 .products-list .nails-block .nail {
+  position: relative;
   cursor: pointer;
   display: inline-block;
   margin-right: 3px;
   padding: 3px 5px;
   transition: all 0.3s;
 }
+.products-list .nails-block .nail:hover .tooltip {
+  opacity: 1;
+}
+.products-list .nails-block .nail .tooltip {
+  opacity: 0;
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  width: max-content;
+  padding: 2px 4px;
+  font: 300 12px/1 'Roboto';
+  border: 1px solid #ccc;
+  background: #f2f2f2;
+  z-index: 20;
+  transition: all 0.25s;
+}
 .products-list .nails-block .nail.active,
 .products-list .nails-block .nail:hover {
   border: 1px solid #009ced;
   background: #fff;
+}
+.products-list .choose-brand-dropdown {
+  position: relative;
+  cursor: pointer;
+  background: #fff;
+}
+.products-list .choose-brand-dropdown .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 18px;
+  width: 18px;
+  margin: 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+.products-list .choose-brand-dropdown .container-checkbox {
+  position: relative;
+  padding-left: 25px;
+}
+.products-list .choose-brand-dropdown .container-checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+.products-list .choose-brand-dropdown .container-checkbox input:checked ~ .checkmark {
+  background-color: #3fa9f5;
+}
+.products-list .choose-brand-dropdown .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.products-list .choose-brand-dropdown .container-checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+.products-list .choose-brand-dropdown .container-checkbox .checkmark:after {
+  left: 5px;
+  top: 3px;
+  width: 3px;
+  height: 6px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+.products-list .choose-brand-dropdown.active .dropdown-brand {
+  display: flex;
+}
+.products-list .choose-brand-dropdown .dropdown-brand {
+  display: none;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-height: 200px;
+  position: absolute;
+  min-width: 380px;
+  top: 100%;
+  margin-top: -1px;
+  border: 1px solid #b3b3b3;
+  padding: 5px 20px 20px 20px;
+  font: 400 14px/1 'Roboto';
+  background: #fff;
+  z-index: 10;
+}
+.products-list .choose-brand-dropdown .dropdown-brand li {
+  margin-top: 15px;
+}
+.products-list .choose-brand-dropdown.active .name {
+  color: #3fa9f5;
+}
+.products-list .choose-brand-dropdown.active .name:after {
+  transform: translateY(-25%) rotate(-45deg);
+  border-color: #3fa9f5;
+}
+.products-list .choose-brand-dropdown .name {
+  position: relative;
+  padding: 8px 45px 8px 25px;
+  background: #fff;
+  border: 1px solid #b3b3b3;
+  font: 400 18px/1 'Roboto';
+  transition: all 0.25s;
+}
+.products-list .choose-brand-dropdown .name:after {
+  content: '';
+  position: absolute;
+  right: 10px;
+  width: 10px;
+  height: 10px;
+  top: 50%;
+  transform: translateY(-65%) rotate(135deg);
+  border-top: 2px solid #ccc;
+  border-right: 2px solid #ccc;
 }
 .products-list .action-block {
   display: flex;
@@ -1356,53 +1504,84 @@ aside .fixed-block .text p {
   align-items: center;
   font: 300 14px/1.4 'Roboto';
 }
+.products-list .action-block .form {
+  display: flex;
+  align-items: center;
+}
+.products-list .action-block .choose-brand-dropdown,
+.products-list .action-block .form {
+  margin-bottom: 25px;
+}
 .products-list .action-block span {
   display: inline-block;
+  font: 400 18px/1.4 'Roboto';
   margin: 0 10px;
 }
 .products-list .action-block .price-down,
 .products-list .action-block .price-up {
-  padding: 7px 0 7px 15px;
+  padding: 0 5px 0 10px;
   width: 120px;
-  border-radius: 10px;
+  font: 300 24px/1 'Roboto';
   border: 1px solid #808080;
 }
-.products-list .slider {
-  width: 510px;
-}
-.products-list .slider #min,
-.products-list .slider #max {
-  position: relative;
-  top: -23px;
-  left: -5px;
-  font: 300 14px/1.4 'Roboto';
-  color: #000;
-}
-.products-list .slider.ui-widget-content {
-  height: 3px;
-  border: none;
-  background: #009ced;
-  border-radius: 0;
-}
-.products-list .slider .ui-widget-header {
-  background: #b7ccd4;
-}
-.products-list .slider .ui-slider-handle {
-  margin: 0;
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  outline: none;
-  background: #009ced;
+@media (max-width: 1300px) {
+  .products-list .choose-brand-dropdown .dropdown-brand {
+    right: 0;
+  }
 }
 @media (max-width: 1130px) {
   .products-list .slider {
     margin-top: 40px;
   }
 }
+@media (max-width: 1024px) {
+  .products-list .choose-brand-dropdown .dropdown-brand {
+    left: 0;
+  }
+}
+@media (max-width: 800px) {
+  .products-list .filter {
+    padding: 15px;
+  }
+  .products-list .filter-footer {
+    margin-top: 15px;
+  }
+  .products-list .color-block {
+    margin: 0 -15px;
+  }
+  .products-list .filter-name {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .products-list .action-block .form {
+    flex-wrap: wrap;
+  }
+  .products-list .brands-list ul {
+    width: 100%;
+  }
+}
 @media (max-width: 400px) {
+  .products-list .nails-block {
+    flex-wrap: wrap;
+  }
+  .products-list .choose-brand-dropdown {
+    width: 100%;
+  }
+  .products-list .choose-brand-dropdown.active .dropdown-brand {
+    min-width: 100%;
+    max-height: initial;
+  }
+  .products-list .filter {
+    padding: 10px;
+  }
+  .products-list .filter-footer {
+    margin-top: 10px;
+  }
+  .products-list .brands-list ul {
+    columns: 2;
+  }
   .products-list .action-block .price-down,
   .products-list .action-block .price-up {
-    width: 40%;
+    width: 30%;
   }
 }

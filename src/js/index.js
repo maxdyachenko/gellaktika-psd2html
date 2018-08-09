@@ -102,75 +102,21 @@ $(document).ready(function () {
         $(this).find('input').attr('checked', true);
     });
 
+    $('.choose-brand-dropdown .name').click(function () {
+        event.preventDefault();
 
-    var input1 = $('.price-down');
-    var input2 = $('.price-up');
-
-    var values = [$('#min').html(), $('#max').html()];
-
-    input1.change(function () {
-        $('.slider').slider("values", 0, $(this).val());
-
+        $('.choose-brand-dropdown').toggleClass('active');
     });
 
-    input2.change(function () {
-        $('.slider').slider("values", 1, $(this).val());
-
-    });
-
-    $('.slider').slider({
-        range: true,
-        min: parseInt(values[0]),
-        max: parseInt(values[1]),
-        step: 10,
-        values: values,
-        animate: 'slow',
-        create: function () {
-            $('#min').appendTo($('.slider span').get(0));
-            $('#max').appendTo($('.slider span').get(1));
-        },
-        change: function (event, ui) {
-            $(ui.handle).find('a').html('' + ui.value);
-
-            var index = $(ui)[0].handleIndex;
-            var value = ui.value;
-        },
-        slide: function (event, ui) {
-            $(ui.handle).find('a').html('' + ui.value);
-
-            var index = $(ui)[0].handleIndex;
-            var value = ui.value;
-
-            if (index === 0)
-                input1.val(value);
-            else
-                input2.val(value);
-        }
-    });
-
-// only initially needed
-    $('#min').html('' + $('.slider').slider('values', 0)).position({
-        my: 'center top',
-        at: 'center bottom',
-        of: $('.slider span:eq(0)'),
-        offset: "0, 10"
-    });
-
-    $('#max').html('' + $('.slider').slider('values', 1)).position({
-        my: 'center top',
-        at: 'center bottom',
-        of: $('.slider span:eq(1)'),
-        offset: "0, 10"
-    });
 
 
     $('.js-reset').click(function () {
-        input1.val('');
-        input2.val('');
-        $('.slider').slider( "values", values );
+        $('.price-down').val('');
+        $('.price-up').val('');
 
         $('.js-nail-handler').removeClass('active');
         $('.js-nail-handler').find('input').attr('checked', false);
+        $('.choose-brand-dropdown').find('input').attr('checked', false);
     });
 
 });

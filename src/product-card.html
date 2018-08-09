@@ -13,20 +13,15 @@
 </head>
 <body>
 <div class="container">
-    <header class="main-header">
+    <header  class="main-header">
         <div class="top-actions">
-            <div class="nav">
-                <ul>
-                    <li><a href="">О компании</a></li>
-                    <li><a href="">Оплата</a></li>
-                    <li><a href="">Хиты продаж</a></li>
-                    <li><a href="">Новинки</a></li>
-                    <li><a href="">Распродажа</a></li>
-                </ul>
+            <div class="consult">
+                <p><span>Бесплатная доставка</span> от 3000 руб.</p>
+                <p><span>Консультация: </span><a href="tel:+79045840707">+7 (904) 584-07-07</a></p>
             </div>
-            <p class="consult"><span>Бесплатая консультация </span><a href="tel:+79045840707">+7 (904) 584-07-07</a></p>
             <div class="personal-area">
-                <a href="#"><i><img src="./images/person-icon.png" alt="Person"></i> Личный кабинет</a>
+                <a href="#"><i><img src="./images/person-icon.png" alt="Person"></i>Вход в личный кабинет</a>
+                <a href="#">Регистрация</a>
             </div>
         </div>
         <div class="center-info">
@@ -42,7 +37,7 @@
                 </p>
             </div>
             <form class="desktop-search" action="">
-                <input type="search" placeholder="Что-то ищете конкретное?">
+                <input type="search" placeholder="Более 5000 товаров...">
                 <button type="submit">найти</button>
             </form>
             <div class="cart">
@@ -50,7 +45,7 @@
                     <img src="./images/cart-icon.png" alt="Cart">
                 </div>
                 <p class="top">Корзина <a href="#">Оформить</a></p>
-                <p class="text-items-cart">&hearts; Отложено: <span>1</span></p>
+                <p class="text-items-cart">ВСЕГО:</p>
                 <p class="bottom"><span>1</span> товаров на <span>129</span> руб.</p>
             </div>
         </div>
@@ -61,15 +56,16 @@
                 </div>
                 <div class="center-menu">
                     <ul>
-                        <li><a href="#">Бесплатная доставка</a></li>
-                        <li><a href="#">Отзывы</a></li>
-                        <li><a href="#">Блог</a></li>
-                        <li><a href="#">Новинки</a></li>
+                        <li><a href="#">О нас</a></li>
+                        <li><a href="#">Доставка</a></li>
+                        <li><a href="#">Как заказать</a></li>
+                        <li><a href="#">Статьи</a></li>
                         <li><a href="#">Контакты</a></li>
+                        <li><a href="#">Пункты выдачи</a></li>
                     </ul>
                 </div>
                 <div class="socials">
-                    <p class="title">Следуйте за нами</p>
+                    <p class="title">Мы в соц. сетях</p>
                     <div class="icons">
                         <a href="#"><i><img src="./images/vk-icon.png" alt=""></i></a>
                         <a href="#"><i><img src="./images/ok-icon.png" alt=""></i></a>
@@ -83,9 +79,55 @@
                 <div class="menu">
                     <ul>
                         <li class="with-dropdown"><a href="#">Каталог</a>
-                            <ul class="dropdown">
+                            <div class="dropdown-container">
+                                <ul>
+                                    <li><a href="#">Canni Colors Основные</a></li>
+                                    <li class="active"><a href="#">Platinum Гель-лак</a></li>
+                                    <li><a href="#">Blossom Гель-лак</a></li>
+                                    <li><a href="#">Termo Гель-лак</a></li>
+                                    <li><a href="#">Crystal Полигель</a></li>
+                                    <li><a href="#">Base/Top</a></li>
+                                    <li><a href="#">Gel Paints Гель-краска</a></li>
+                                    <li><a href="#">GD Гель-пластилин</a></li>
+                                    <li><a href="#">CatEye "Кошачий глаз"</a></li>
+                                    <li><a href="#">Жидкости</a></li>
+                                    <li><a href="#">UV Builder Gel</a></li>
+                                    <li><a href="#">LED/UV Color Gel</a></li>
+                                    <li><a href="#">Water Based</a></li>
+                                    <li><a href="#">УФ-лапмы</a></li>
+                                    <li><a href="#">Зеркальная втирка</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="#"></a>Бесплатная доставка</li>
+                        <li><a href="#"></a>Отзывы</li>
+                        <li><a href="#"></a>Блог</li>
+                        <li><a href="#"></a>Новинки</li>
+                        <li><a href="#"></a>Контакты</li>
+                        <li><form class="mobile-search" action="">
+                            <input type="search" placeholder="Что-то ищете конкретное?">
+                            <button type="submit">найти</button>
+                        </form></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <aside>
+            <nav>
+                <ul>
+                    <li class="blue-text"><a href="#">Новинки</a></li>
+                    <li class="pink-text"><a href="#">Скидки</a></li>
+                    <li><a href="#">Гель лаки</a></li>
+                    <!-- если у элемента есть выпадающий список то добавить класс with-dropdown -->
+                    <li class="active with-dropdown">
+                        <a href="#">Гелевая система</a>
+                        <div class="dropdown-container">
+                            <!-- если в списке больше 15 пунктов, то разбить этот список на несколько, чтобы в одном было максимум 15 -->
+                            <ul>
                                 <li><a href="#">Canni Colors Основные</a></li>
-                                <li class="active"><a href="#">Platinum Гель-лак</a></li>
+                                <li><a href="#">Platinum Гель-лак</a></li>
                                 <li><a href="#">Blossom Гель-лак</a></li>
                                 <li><a href="#">Termo Гель-лак</a></li>
                                 <li><a href="#">Crystal Полигель</a></li>
@@ -100,42 +142,27 @@
                                 <li><a href="#">УФ-лапмы</a></li>
                                 <li><a href="#">Зеркальная втирка</a></li>
                             </ul>
-                        </li>
-                        <li><a href="#"></a>Бесплатная доставка</li>
-                        <li><a href="#"></a>Отзывы</li>
-                        <li><a href="#"></a>Блог</li>
-                        <li><a href="#"></a>Новинки</li>
-                        <li><a href="#"></a>Контакты</li>
-                        <li>
-                            <form class="mobile-search" action="">
-                                <input type="search" placeholder="Что-то ищете конкретное?">
-                                <button type="submit">найти</button>
-                            </form>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </header>
-    <main>
-        <aside>
-            <nav>
-                <ul>
-                    <li><a href="#">Canni Colors Основные</a></li>
-                    <li class="active"><a href="#">Platinum Гель-лак</a></li>
-                    <li><a href="#">Blossom Гель-лак</a></li>
-                    <li><a href="#">Termo Гель-лак</a></li>
-                    <li><a href="#">Crystal Полигель</a></li>
-                    <li><a href="#">Base/Top</a></li>
-                    <li><a href="#">Gel Paints Гель-краска</a></li>
-                    <li><a href="#">GD Гель-пластилин</a></li>
-                    <li><a href="#">CatEye "Кошачий глаз"</a></li>
+                            <ul>
+                                <li><a href="#">Canni Colors Основные</a></li>
+                                <li><a href="#">Platinum Гель-лак</a></li>
+                                <li><a href="#">Blossom Гель-лак</a></li>
+                                <li><a href="#">Termo Гель-лак</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#">Материалы для дизайна</a></li>
+                    <li><a href="#">Стразы</a></li>
+                    <li><a href="#">Лампы</a></li>
+                    <li><a href="#">Аппараты для маникюра</a></li>
+                    <li><a href="#">Стерилизация</a></li>
+                    <li><a href="#">Инструменты</a></li>
+                    <li><a href="#">Кисти</a></li>
+                    <li><a href="#">Фрезы, боры</a></li>
+                    <li><a href="#">Пилки, бафы</a></li>
                     <li><a href="#">Жидкости</a></li>
-                    <li><a href="#">UV Builder Gel</a></li>
-                    <li><a href="#">LED/UV Color Gel</a></li>
-                    <li><a href="#">Water Based</a></li>
-                    <li><a href="#">УФ-лапмы</a></li>
-                    <li><a href="#">Зеркальная втирка</a></li>
+                    <li><a href="#">Аксессуары</a></li>
+                    <li><a href="#">Расходные материалы</a></li>
+                    <li><a href="#">Наращивание ресниц</a></li>
                 </ul>
             </nav>
             <div class="banner">
@@ -144,7 +171,7 @@
                 </a>
             </div>
             <div class="news">
-                <p class="title">Новое на блоге</p>
+                <p class="title">Последние статьи</p>
                 <div class="content">
                     <ul>
                         <li><a href="#">Как отличить подделку
@@ -158,8 +185,43 @@
                     </ul>
                 </div>
                 <footer>
-                    <a href="#">Все статьи</a>
+                    <a class="watch-all-button" href="#">Смотреть все</a>
                 </footer>
+            </div>
+
+            <div class="fixed-fix"></div>
+            <div class="fixed-block">
+                <div class="top">
+                    <img src="./images/big-cart.png" alt="Корзина">
+                </div>
+                <div class="content">
+                    <div class="item">
+                        <p class="title">
+                            1) Бесплатная Доставка
+                            от 3 000 р.
+                        </p>
+                        <div class="text">
+                            <p>Доставка по всему миру без минимальной суммы заказа.</p>
+                            <p>По Краснодару — за 1-2 дня, по России — в течение 2-х недель.</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <p class="title">
+                            2)  Гарантия качества
+                        </p>
+                        <div class="text">
+                            <p>Вы можете отказаться от покупки, если заказ вас не устроил. В магазинах можно протестировать товар перед покупкой. Вся продукция сертифицирована — у нас только оригинальные товары.</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <p class="title">
+                            3) Удобная оплата
+                        </p>
+                        <div class="text">
+                            <p>Оплата возможна наличными и картой — курьеру при получении заказа или онлайн.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </aside>
         <div class="main-content-wrapper product-card-wrapper">
