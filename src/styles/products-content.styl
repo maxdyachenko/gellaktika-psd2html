@@ -27,6 +27,7 @@
 			box-shadow 1px 1px 15px 1px rgba(COLOR_BRAND_GREY,0.3);
 			.add-to-favorites, .product-in-card
 				opacity 1
+				z-index 999
 	.card-image
 		width 164px
 		height 164px
@@ -86,6 +87,20 @@
 @media (max-width: 700px)
 	.cards-wrapper .card-product
 		flex-basis 47%
-@media (max-width: 500px)
+		&:hover
+			box-shadow none
+
+@media (max-width: 600px)
 	.cards-wrapper .card-product
-		flex-basis 100%
+		padding 10px
+		margin 0
+		width auto
+		&:hover
+			box-shadow none
+		.card-image
+			width auto
+			height auto
+		.card-footer
+			justify-content space-around
+			margin-left 0
+			margin-right 0

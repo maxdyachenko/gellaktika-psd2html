@@ -1,3 +1,5 @@
+.main-page-slider
+	overflow hidden
 .main-content-wrapper
 	padding-left 20px
 	padding-right 10px
@@ -7,6 +9,7 @@
 	.header-title
 		display flex
 		align-items center
+		flex-wrap wrap
 		justify-content space-between
 	.advantages
 		display flex
@@ -50,13 +53,6 @@
 				left auto
 				right 20px
 				transform translateY(-100%) rotate(180deg)
-	.owl-carousel-main
-		max-width 912px
-	.owl-carousel
-		.item
-			width 100%
-			max-height 330px
-			background black
 	.owl-carousel-sales
 		width 452px
 		height 656px
@@ -115,9 +111,13 @@
 				margin-top 55px
 @media (max-width: 800px)
 	.main-content-wrapper
-		padding-left 0
+		padding 0
+		margin 0
 		.owl-carousel-new-products, .owl-carousel-news, .owl-carousel-sales
 			display none !important
+		.products-content
+			.left-products
+				margin-top 0
 @media (max-width: 500px)
 	.main-content-wrapper
 		.advantages

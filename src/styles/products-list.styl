@@ -1,4 +1,6 @@
 .products-list
+	.recomendations-block
+		margin-top 30px
 	.products-list-content
 		margin-top 10px
 	.brands-list
@@ -216,6 +218,9 @@
 			width 120px
 			font 300 24px / 1 'Roboto'
 			border 1px solid COLOR_BRAND_GREY5
+@media (max-width: 1600px)
+	.products-list .nails-block .nail .tooltip
+		width auto
 @media (max-width: 1300px)
 	.products-list .choose-brand-dropdown .dropdown-brand
 		right 0
@@ -227,6 +232,8 @@
 		left 0
 @media (max-width: 800px)
 	.products-list
+		.nails-block .nail .tooltip
+			display none
 		.filter
 			padding 15px
 		.filter-footer

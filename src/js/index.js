@@ -19,14 +19,14 @@ $(document).ready(function () {
         var topPosition = $('.fixed-block').offset().top;
         var leftPosition = $('.fixed-block').offset().left;
         $('.fixed-block').css({'left':leftPosition});
-        $('.fixed-fix').css({'height': $('.fixed-block').height()});
+        $('.fixed-fix').css({'height': $('.fixed-block').outerHeight()});
         $(document).on('scroll', function() {
             if (topPosition <= $(document).scrollTop()) {
                 $('.fixed-block').addClass('fixed');
                 $('.fixed-block').css({'left':leftPosition});
 
                 $('.fixed-fix').addClass('active');
-                $('.fixed-fix').css({'height': $('.fixed-block').height()});
+                $('.fixed-fix').css({'height': $('.fixed-block').outerHeight()});
             }
             else {
                 $('.fixed-block').removeClass('fixed');

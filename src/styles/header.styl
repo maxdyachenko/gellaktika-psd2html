@@ -34,9 +34,14 @@
 			a
 				display flex
 				align-items center
+				transition .25s
+				&:hover
+					color COLOR_BRAND_PINK
 				&:nth-of-type(2)
 					margin-left 42px
 					color COLOR_BRAND_BLUE
+					&:hover
+						color COLOR_BRAND_PINK
 			i
 				display inline-block
 				padding-right 16px
@@ -46,6 +51,9 @@
 			display flex
 		.logo
 			display inline-block
+			img
+				width 262px
+				height 50px
 		.text
 			display inline-block
 			width 200px
@@ -105,6 +113,9 @@
 			vertical-align middle
 			a
 				margin-right 8px
+				transition all .25s
+				&:hover
+					opacity .5
 		.title
 			display table-cell
 			vertical-align middle
@@ -115,6 +126,9 @@
 		font 400 15px / 1.4 'Roboto'
 		color COLOR_BRAND_BLACK2
 		text-transform uppercase
+		transition .25s
+		&:hover
+			color COLOR_BRAND_PINK
 	.bottom-navigation
 		position relative
 		margin-top 15px
@@ -204,14 +218,26 @@
 				display none
 		.cart
 			margin-left auto !important
+@media (max-width: 1024px)
+	.main-header
+		.top-actions
+			margin 0 -20px
 @media (max-width: 900px)
 	.main-header
 		form.desktop-search input
 			width 150px
 @media (max-width: 800px)
 	.main-header
+		.center-info
+			justify-content center
+			.cart
+				margin 10px !important
 		.top-actions
 			padding 0 20px
+			.consult
+				justify-content center
+				p:nth-of-type(1)
+					margin-right 0
 		form.desktop-search
 			display none
 		.bottom-navigation
@@ -222,7 +248,7 @@
 @media (max-width: 600px)
 	.main-header
 		.top-actions
-			padding 0
+			padding 0 5px
 		form.desktop-search
 			margin 10px auto !important
 			input
