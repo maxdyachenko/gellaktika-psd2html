@@ -4,6 +4,44 @@
 	padding-left 20px
 	padding-right 10px
 	margin-right -10px
+	.mobile-banner
+		display none
+		margin-top 30px
+	.mobile-news
+		display none
+		margin-top 30px
+		padding 30px 20px 35px 30px
+		background COLOR_BRAND_WHITE4
+		.title, footer
+			text-align center
+		.title
+			text-transform uppercase
+			color COLOR_BRAND_LIGHT_BLUE
+			padding-bottom 10px
+			font 400 22px / 1.4 'Roboto'
+		footer a
+			font-size 20px
+		.content
+			li
+				position relative
+				padding 11px 0
+				font 300 20px / 1.4 'Roboto'
+				transition all .25s
+				&:hover
+					color COLOR_BRAND_PINK5
+				&:last-of-type
+					margin-bottom 20px
+					&:before
+						content none
+				&:before
+					content ''
+					position absolute
+					bottom 0
+					left 0
+					width 45px
+					border-bottom 1px solid COLOR_BRAND_PINK5
+	.mobile-768-products-carousel-1, .mobile-768-products-carousel-2, .mobile-768-products-carousel-3
+		display flex !important
 	h2
 		color COLOR_BRAND_BLUE
 	.header-title
@@ -90,10 +128,21 @@
 			flex-direction row
 @media (max-width: 1024px)
 	.main-content-wrapper
-		.static-banners
-			display none
 		.advantages .item
 			flex-wrap wrap
+		.static-banners
+			.static
+				&:nth-of-type(1),
+				&:nth-of-type(2)
+					width 50%
+				&:nth-of-type(1)
+					background #FF931E
+				&:nth-of-type(2)
+					background #7AC943
+				&:nth-of-type(3)
+					margin-top 0
+					width 100%
+					background #FF7BAC
 @media (max-width: 955px)
 	.main-content-wrapper
 		.owl-carousel-sales
@@ -118,7 +167,24 @@
 		.products-content
 			.left-products
 				margin-top 0
+@media (max-width: 768px)
+	.main-content-wrapper
+		.mobile-news
+			display block
+		.mobile-768-products-carousel-1, .mobile-768-products-carousel-2, .mobile-768-products-carousel-3
+			justify-content center
+		.products-content
+			&.padding-768
+				padding 0 15px !important
+		.static-banners
+			margin 0 -15px
+		.advantages
+			display none
 @media (max-width: 500px)
+	.mobile-banner
+		display block
+		img
+			width 100%
 	.main-content-wrapper
 		.advantages
 			flex-wrap wrap

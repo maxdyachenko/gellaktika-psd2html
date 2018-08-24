@@ -1,4 +1,36 @@
 .main-header
+	.mobile-actions
+		display none
+		justify-content space-between
+		margin-top 5px
+		padding 0 15px
+		align-items center
+		.left
+			font 400 11px / 1.4 Roboto
+			p:nth-of-type(1)
+				margin-right 30px
+			span
+				color COLOR_BRAND_BLUE
+				padding-left 5px
+			a
+				color COLOR_BRAND_BLACK
+		.right
+			font 300 12px / 1.4 'Roboto'
+			color COLOR_BRAND_DARK_BLACK
+			a
+				display flex
+				align-items center
+				transition .25s
+				&:hover
+					color COLOR_BRAND_PINK
+				&:nth-of-type(2)
+					margin-left 42px
+					color COLOR_BRAND_BLUE
+					&:hover
+						color COLOR_BRAND_PINK
+			i
+				display inline-block
+				padding-right 16px
 	.top-actions
 		display flex
 		justify-content space-between
@@ -135,22 +167,31 @@
 		padding 7px 0
 		.mobile-nav-wrapper
 			display none
+			justify-content space-between
 			.menu
 				position absolute
 				top 100%
 				left 0
+			.cart-mobile img
+				width: 34px
+				height 35px
+				margin-right 0
+			.logo img
+				width 184px
+				height 35px
+				margin 0 5px
 			p
 				display flex
 				align-items center
 				text-transform uppercase
 				font 700 16px / 1.4 'Roboto'
 				color COLOR_BRAND_BLUE
-			img
+			.js-menu-handler img
 				cursor pointer
 				display inline-block
 				margin-right 10px
-				width 25px
-				height 23px
+				width 37px
+				height 35px
 		.desktop-nav-wrapper
 			display flex
 			justify-content space-between
@@ -229,6 +270,7 @@
 @media (max-width: 800px)
 	.main-header
 		.center-info
+			display none
 			justify-content center
 			.cart
 				margin 10px !important
@@ -245,10 +287,21 @@
 				display none
 			.mobile-nav-wrapper
 				display flex
+@media (max-width: 768px)
+	.main-header
+		.mobile-actions
+			display flex
+		.bottom-navigation
+			padding 15px
+			margin 0
+			background #F6F8F8
+		.top-actions
+			display none
 @media (max-width: 600px)
 	.main-header
 		.top-actions
-			padding 0 5px
+			padding 0 10px
+			margin 0 -10px
 		form.desktop-search
 			margin 10px auto !important
 			input
@@ -257,3 +310,10 @@
 			.left
 				margin auto
 				flex-direction column
+
+@media (max-width: 340px)
+	.main-header
+		.bottom-navigation
+			.mobile-nav-wrapper
+				.logo img
+					width 150px

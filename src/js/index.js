@@ -7,6 +7,45 @@ $(document).ready(function () {
         items: 1
     });
 
+    if ($(window).width() <= 768) {
+        //хиты продаж
+        $('.mobile-768-products-carousel-1, ' +
+            '.mobile-768-products-carousel-2, ' +
+            '.mobile-768-products-carousel-3').children('.owl-carousel').remove();
+        $('.mobile-768-products-carousel-1, .mobile-768-products-carousel-2').owlCarousel({
+            loop: true,
+            nav: false,
+            dots: true,
+            items: 3,
+            responsive:{
+                0:{
+                    items:2,
+
+                },
+                500:{
+                    items:3,
+
+                },
+                768:{
+                    items:4,
+
+                }
+            }
+        });
+        $('.mobile-768-products-carousel-3').owlCarousel({
+            loop: true,
+            nav: false,
+            dots: true,
+            items: 1
+        });
+        $('.owl-carousel-mobile-768-2, .owl-carousel-mobile-768-3, .owl-carousel-mobile-768-4').owlCarousel({
+            loop: true,
+            nav: false,
+            dots: false,
+            items: 1
+        });
+    }
+
     $('.owl-carousel-news, .owl-carousel-new-products').owlCarousel({
         loop: true,
         nav: true,

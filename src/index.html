@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="./css/owlcarousel/owl.theme.default.min.css">
 </head>
 <body>
-<div class="container">
+<div class="container no-padding-768">
     <header  class="main-header">
         <div class="top-actions">
             <div class="consult">
@@ -74,7 +74,15 @@
                 </div>
             </div>
             <div class="mobile-nav-wrapper">
-                <p id="js-menu-handler"><img src="./images/menu-icon.png" alt=""> Меню</p>
+                <p id="js-menu-handler"><img src="./images/mobile-hamburger.png" alt=""></p>
+                <div class="logo">
+                    <a href="#"><img src="./images/logo.svg" alt=""></a>
+                </div>
+                <div class="cart-mobile">
+                    <a href="#">
+                        <img src="./images/mobile-cart-icon.png" alt="">
+                    </a>
+                </div>
                 <div class="menu">
                     <ul>
                         <li class="with-dropdown"><a href="#">Каталог</a>
@@ -109,6 +117,15 @@
                         </form></li>
                     </ul>
                 </div>
+            </div>
+        </div>
+        <div class="mobile-actions">
+            <div class="left">
+                <p><span>Бесплатная доставка</span> от 3000 руб.</p>
+                <p><span>Консультация: </span><a href="tel:+79045840707">+7 (904) 584-07-07</a></p>
+            </div>
+            <div class="right">
+                <a href="#"><i><img src="./images/person-icon.png" alt="Person"></i>ВОЙТИ</a>
             </div>
         </div>
     </header>
@@ -275,12 +292,12 @@
                     <img src="" alt="">
                 </div>
             </div>
-            <div class="products-content">
+            <div class="products-content padding-768">
                 <div class="header-title">
                     <h2>Хиты продаж</h2>
                     <a href="#" class="watch-all-button">Смотреть все</a>
                 </div>
-                <div class="cards-wrapper">
+                <div class="mobile-768-products-carousel-1 owl-common-styles owl-carousel owl-theme cards-wrapper">
                     <div class="owl-common-styles owl-carousel owl-carousel-news owl-theme">
                         <div class="item">
                             <img src="./images/placeholder.png" alt="">
@@ -294,16 +311,6 @@
                     </div>
                     <div class="card-product">
                         <div class="card-image">
-                            <!--<div class="arrows-wrapper">-->
-                                <!--<div class="wrap">-->
-                                    <!--<div class="product-arrow green-arrow">Новинка</div>-->
-                                <!--</div>-->
-                                <!--<div class="wrap"><div class="product-arrow orange-arrow">Скидка</div></div>-->
-                                <!--<div class="wrap"><div class="product-arrow blue-arrow">Хит</div></div>-->
-                            <!--</div>-->
-                            <!--<div class="add-to-favorites">-->
-                                <!--<img src="./images/heart-icon.png" alt="Add to favorites">-->
-                            <!--</div>-->
                             <a href="#">
                                 <img src="https://canni-gdcoco.com/upload/iblock/f57/f574935e4ee4391eaf9a0976ce3f6a84.jpg" alt="Product">
                             </a>
@@ -501,12 +508,25 @@
                     </div>
                 </div>
             </div>
-            <div class="products-content">
+            <div class="mobile-768-carousel-with-banners-2">
+                <div class="owl-common-styles owl-carousel owl-carousel-mobile-768-2 owl-theme">
+                    <div class="item">
+                        <img src="./images/placeholder.png" alt="">
+                    </div>
+                    <div class="item">
+                        <img src="./images/banner.png" alt="">
+                    </div>
+                    <div class="item">
+                        <img src="./images/placeholder.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="products-content padding-768">
                 <div class="header-title">
                     <h2>Новинки</h2>
                     <a href="#" class="watch-all-button">Смотреть все</a>
                 </div>
-                <div class="cards-wrapper">
+                <div class="mobile-768-products-carousel-2 owl-common-styles owl-carousel owl-theme cards-wrapper">
                     <div class="owl-common-styles owl-carousel owl-carousel-new-products owl-theme">
                         <div class="item">
                             <img src="./images/placeholder.png" alt="">
@@ -634,13 +654,26 @@
                     </div>
                 </div>
             </div>
+            <div class="mobile-768-carousel-with-banners-3">
+                <div class="owl-common-styles owl-carousel owl-carousel-mobile-768-2 owl-theme">
+                    <div class="item">
+                        <img src="./images/placeholder.png" alt="">
+                    </div>
+                    <div class="item">
+                        <img src="./images/banner.png" alt="">
+                    </div>
+                    <div class="item">
+                        <img src="./images/placeholder.png" alt="">
+                    </div>
+                </div>
+            </div>
 
-            <div class="products-content">
+            <div class="products-content padding-768">
                 <div class="header-title">
                     <h2>Распродажа!</h2>
                     <a href="#" class="watch-all-button">Смотреть все</a>
                 </div>
-                <div class="cards-wrapper with-order">
+                <div class="mobile-768-products-carousel-3 owl-common-styles owl-carousel owl-theme cards-wrapper with-order">
                     <div class="left-products">
                         <div class="card-product">
                             <div class="card-image">
@@ -751,8 +784,42 @@
                     </div>
                 </div>
             </div>
-
-
+            <div class="mobile-768-carousel-with-banners-4">
+                <div class="owl-common-styles owl-carousel owl-carousel-mobile-768-2 owl-theme">
+                    <div class="item">
+                        <img src="./images/placeholder.png" alt="">
+                    </div>
+                    <div class="item">
+                        <img src="./images/banner.png" alt="">
+                    </div>
+                    <div class="item">
+                        <img src="./images/placeholder.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="mobile-news">
+                <p class="title">Последние статьи</p>
+                <div class="content">
+                    <ul>
+                        <li><a href="#">Как отличить подделку
+                            от оригинала?</a></li>
+                        <li><a href="#">Секреты мастеров
+                            маникюра</a></li>
+                        <li><a href="#">Сколько стоит
+                            настоящий
+                            STRONG</a></li>
+                        <li><a href="#">Тренды Весны 2018</a></li>
+                    </ul>
+                </div>
+                <footer>
+                    <a class="watch-all-button" href="#">Смотреть все</a>
+                </footer>
+            </div>
+            <div class="mobile-banner">
+                <a href="#">
+                    <img src="./images/banner.jpg" alt="Banner">
+                </a>
+            </div>
             <div class="about-our-shop">
                 <div class="logo">
                     <img src="./images/bottom-logo.png" alt="Logo">
