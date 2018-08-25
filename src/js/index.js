@@ -158,4 +158,28 @@ $(document).ready(function () {
         $('.choose-brand-dropdown').find('input').attr('checked', false);
     });
 
+
+    function getInternetExplorerVersion()
+    {
+        var rv = -1; // Return value assumes failure.
+
+        if (navigator.appName == 'Microsoft Internet Explorer')
+        {
+            var ua = navigator.userAgent;
+            var re  = new RegExp("MSIE ([0-9]{1,}[\.0-9]{0,})");
+            if (re.exec(ua) != null)
+                rv = parseFloat( RegExp.$1 );
+        }
+
+        return rv;
+    }
+
+    if (getInternetExplorerVersion()) {
+        var container = $('.active.with-dropdown').find('.dropdown-container')
+            .css({'width': $('.active.with-dropdown').find('.dropdown-container').find('ul').length * 234});
+
+        $('.dropdown-brand').css('height', $('.dropdown-brand').height())
+
+    }
+
 });
